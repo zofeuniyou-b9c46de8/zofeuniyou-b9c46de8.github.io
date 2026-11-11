@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>17500乐彩网 - 彩票开奖与数据服务</title>
+<meta name="description" content="17500乐彩网提供双色球、大乐透、福彩3D最新开奖号码、走势图分析、投注技巧与规则解读，适合关注数字彩的彩民查阅参考。">
+<meta name="keywords" content="17500乐彩网">
+<style>
+:root {
+  --primary: #b5252e;
+  --primary-light: #fde8e8;
+  --primary-dark: #8a1b22;
+  --accent: #d4941a;
+  --bg: #f7f5f2;
+  --bg-panel: #ffffff;
+  --text-1: #1d1d1f;
+  --text-2: #4a4a52;
+  --text-3: #86868b;
+  --border: #e5e2dd;
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --radius-tag: 5px;
+  --radius-banner: 16px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+  --shadow-md: 0 4px 14px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.04);
+  --font: "PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  --announce-h: 36px;
+  --header-h: 64px;
+  --sticky-h: calc(var(--announce-h) + var(--header-h));
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-padding-top:calc(var(--sticky-h) + 12px);scroll-behavior:smooth}
+body{font-family:var(--font);background:var(--bg);color:var(--text-1);line-height:1.7;font-size:15px;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font-family:inherit;cursor:pointer}
+
+/* ===== 吸顶公告条 ===== */
+.announce-bar{
+  position:sticky;top:0;z-index:100;
+  height:var(--announce-h);
+  background:linear-gradient(90deg,#2a1214,#4a1a1e);
+  color:#f5d9a8;font-size:13px;
+  display:flex;align-items:center;
+  padding:0 20px;gap:16px;
+  overflow:hidden;
+}
+.announce-bar .brand-mini{font-weight:700;color:#f0c674;white-space:nowrap;letter-spacing:.5px}
+.announce-bar .announce-track{display:flex;gap:32px;overflow:hidden;flex:1}
+.announce-bar .announce-item{white-space:nowrap;opacity:.92;display:flex;gap:6px;align-items:center}
+.announce-bar .announce-item .dot{width:5px;height:5px;border-radius:50%;background:#f0c674;flex-shrink:0}
+.announce-bar .announce-date{color:#d4a84a;font-weight:600}
+
+/* ===== 吸顶页头 ===== */
+.site-header{
+  position:sticky;top:var(--announce-h);z-index:99;
+  height:var(--header-h);
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;
+  padding:0 20px;
+}
+.header-inner{
+  max-width:1360px;width:100%;margin:0 auto;
+  display:flex;align-items:center;gap:28px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.logo-svg{width:36px;height:36px}
+.logo-text{font-size:20px;font-weight:800;color:var(--primary);letter-spacing:.5px}
+.main-nav{display:flex;gap:4px;flex:1;flex-wrap:wrap}
+.main-nav a{
+  padding:6px 13px;border-radius:var(--radius-btn);
+  font-size:14px;color:var(--text-2);
+  transition:background .2s,color .2s;
+  white-space:nowrap;
+}
+.main-nav a:hover,.main-nav a:focus-visible{background:var(--primary-light);color:var(--primary);outline:none}
+.main-nav a[aria-current="page"]{background:var(--primary);color:#fff}
+.header-actions{display:flex;gap:8px;flex-shrink:0}
+.btn-outline{
+  padding:6px 16px;border:1px solid var(--primary);color:var(--primary);
+  border-radius:var(--radius-btn);font-size:13px;background:transparent;
+  transition:background .2s,color .2s;
+}
+.btn-outline:hover{background:var(--primary);color:#fff}
+.btn-solid{
+  padding:6px 16px;border:none;background:var(--primary);color:#fff;
+  border-radius:var(--radius-btn);font-size:13px;
+  transition:background .2s;
+}
+.btn-solid:hover{background:var(--primary-dark)}
+.hamburger{
+  display:none;background:none;border:none;padding:8px;
+  flex-direction:column;gap:5px;margin-left:auto;
+}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text-1);border-radius:2px;transition:.2s}
+
+/* ===== 首屏 ===== */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#1c1214 0%,#3d1a1e 55%,#5a2026 100%);
+  color:#fff;padding:56px 20px 48px;
+}
+.hero-inner{max-width:1360px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:48px;align-items:center;position:relative;z-index:2}
+.hero-svg-visual{position:absolute;right:-40px;top:-30px;width:520px;height:420px;opacity:.5;pointer-events:none;z-index:1}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(240,198,116,.12);border:1px solid rgba(240,198,116,.3);
+  color:#f0c674;padding:4px 14px;border-radius:20px;font-size:13px;
+  margin-bottom:16px;
+}
+.hero h1{font-size:40px;font-weight:800;letter-spacing:1px;margin-bottom:14px;line-height:1.2}
+.hero-desc{font-size:16px;line-height:1.8;color:rgba(255,255,255,.82);max-width:640px;margin-bottom:24px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-actions .btn-hero-main{
+  padding:11px 28px;background:var(--accent);color:#1a0e0f;
+  border:none;border-radius:var(--radius-btn);font-size:15px;font-weight:700;
+  transition:box-shadow .2s,transform .2s;
+}
+.hero-actions .btn-hero-main:hover{box-shadow:0 6px 20px rgba(212,148,26,.35);transform:translateY(-1px)}
+.hero-actions .btn-hero-ghost{
+  padding:11px 28px;background:transparent;color:#fff;
+  border:1px solid rgba(255,255,255,.35);border-radius:var(--radius-btn);font-size:15px;
+  transition:background .2s;
+}
+.hero-actions .btn-hero-ghost:hover{background:rgba(255,255,255,.08)}
+.hero-stats{display:flex;gap:28px;margin-top:28px;flex-wrap:wrap}
+.hero-stat{display:flex;flex-direction:column}
+.hero-stat .num{font-size:26px;font-weight:800;color:#f0c674;line-height:1.2}
+.hero-stat .label{font-size:12px;color:rgba(255,255,255,.55);margin-top:2px}
+.hero-side-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius-banner);padding:22px;
+  backdrop-filter:blur(6px);position:relative;z-index:2;
+}
+.hero-side-card h3{font-size:14px;color:#f0c674;margin-bottom:14px;font-weight:600;letter-spacing:.5px}
+.hero-side-item{display:flex;justify-content:space-between;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:13px}
+.hero-side-item:last-child{border-bottom:none}
+.hero-side-item .name{color:rgba(255,255,255,.85)}
+.hero-side-item .val{color:#f0c674;font-weight:600;font-variant-numeric:tabular-nums}
+
+/* ===== 布局容器 ===== */
+.layout-wrap{max-width:1360px;margin:0 auto;padding:0 20px}
+.portal-grid{display:grid;grid-template-columns:180px 1fr 260px;gap:28px;padding-top:32px;padding-bottom:56px;align-items:start}
+
+/* ===== 左侧频道索引 ===== */
+.channel-sidebar{position:sticky;top:calc(var(--sticky-h) + 16px)}
+.channel-sidebar h2{font-size:13px;color:var(--text-3);font-weight:600;letter-spacing:1px;margin-bottom:10px;padding-left:12px}
+.channel-list{display:flex;flex-direction:column;gap:2px}
+.channel-list a{
+  padding:9px 12px;border-radius:var(--radius-btn);font-size:14px;color:var(--text-2);
+  display:flex;align-items:center;justify-content:space-between;
+  transition:background .15s,color .15s;
+}
+.channel-list a:hover{background:var(--primary-light);color:var(--primary)}
+.channel-list a .count{font-size:11px;color:var(--text-3);background:var(--bg);padding:1px 7px;border-radius:10px}
+.channel-sidebar .quick-box{
+  margin-top:20px;padding:14px;background:var(--bg-panel);
+  border-radius:var(--radius-card);border:1px solid var(--border);
+  font-size:12px;color:var(--text-3);line-height:1.9;
+}
+.channel-sidebar .quick-box strong{display:block;color:var(--text-2);margin-bottom:6px;font-size:13px}
+
+/* ===== 主内容区 ===== */
+.main-content{min-width:0}
+.section{margin-bottom:44px}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:16px;gap:12px;flex-wrap:wrap}
+.section-head h2{font-size:22px;font-weight:700;color:var(--text-1);letter-spacing:.3px;position:relative;padding-left:14px}
+.section-head h2::before{content:"";position:absolute;left:0;top:5px;bottom:5px;width:4px;border-radius:2px;background:var(--primary)}
+.section-head .sub{font-size:13px;color:var(--text-3)}
+.section-head .more-link{font-size:13px;color:var(--primary);font-weight:500}
+.section-head .more-link:hover{text-decoration:underline}
+
+/* 领域概览 */
+.overview-text{background:var(--bg-panel);border-radius:var(--radius-card);padding:24px 26px;border:1px solid var(--border);box-shadow:var(--shadow-sm);font-size:15px;color:var(--text-2);line-height:1.85}
+.overview-text p+p{margin-top:12px}
+.overview-text strong{color:var(--text-1)}
+
+/* 精选卡片网格 */
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.content-card{
+  background:var(--bg-panel);border-radius:var(--radius-card);
+  border:1px solid var(--border);overflow:hidden;
+  box-shadow:var(--shadow-sm);
+  transition:box-shadow .2s,transform .2s;
+  display:flex;flex-direction:column;
+}
+.content-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.content-card .card-img-wrap{position:relative;aspect-ratio:4/3;overflow:hidden;background:#ece8e2}
+.content-card .card-img-wrap img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
+.content-card:hover .card-img-wrap img{transform:scale(1.03)}
+.content-card .card-body{padding:14px 16px 16px;flex:1;display:flex;flex-direction:column}
+.content-card .card-type{
+  display:inline-block;font-size:11px;padding:2px 8px;border-radius:var(--radius-tag);
+  background:var(--primary-light);color:var(--primary);font-weight:600;
+  margin-bottom:8px;align-self:flex-start;
+}
+.content-card .card-title{font-size:16px;font-weight:700;line-height:1.4;margin-bottom:6px;color:var(--text-1)}
+.content-card .card-desc{font-size:13px;color:var(--text-2);line-height:1.65;flex:1;margin-bottom:10px}
+.content-card .card-meta{display:flex;gap:10px;align-items:center;flex-wrap:wrap;font-size:12px;color:var(--text-3)}
+.content-card .card-meta .tag{background:var(--bg);padding:1px 8px;border-radius:10px}
+.content-card .card-meta .hot{color:var(--accent);font-weight:600;margin-left:auto}
+
+/* 最新更新列表 */
+.update-list{background:var(--bg-panel);border-radius:var(--radius-card);border:1px solid var(--border);overflow:hidden}
+.update-item{display:flex;gap:16px;padding:14px 20px;border-bottom:1px solid var(--border);align-items:baseline;transition:background .15s}
+.update-item:last-child{border-bottom:none}
+.update-item:hover{background:#fdfbf9}
+.update-item .u-date{font-size:12px;color:var(--text-3);white-space:nowrap;flex-shrink:0;font-variant-numeric:tabular-nums;width:76px}
+.update-item .u-name{font-size:14px;font-weight:600;color:var(--text-1);flex-shrink:0;min-width:130px}
+.update-item .u-summary{font-size:13px;color:var(--text-2);flex:1;min-width:0}
+.update-item .u-badge{font-size:11px;padding:1px 8px;border-radius:10px;background:var(--primary-light);color:var(--primary);white-space:nowrap;flex-shrink:0}
+
+/* 分类入口 */
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat-item{
+  background:var(--bg-panel);border:1px solid var(--border);border-radius:var(--radius-card);
+  padding:16px 14px;display:flex;flex-direction:column;gap:6px;
+  transition:border-color .2s,box-shadow .2s;cursor:pointer;
+}
+.cat-item:hover{border-color:var(--primary);box-shadow:var(--shadow-sm)}
+.cat-item .cat-icon{width:32px;height:32px;border-radius:8px;background:var(--primary-light);display:flex;align-items:center;justify-content:center;color:var(--primary);font-weight:800;font-size:15px}
+.cat-item .cat-name{font-size:14px;font-weight:600;color:var(--text-1)}
+.cat-item .cat-desc{font-size:12px;color:var(--text-3);line-height:1.5}
+
+/* 深度解析 */
+.deep-dive{background:var(--bg-panel);border-radius:var(--radius-card);border:1px solid var(--border);padding:28px 32px;box-shadow:var(--shadow-sm)}
+.deep-dive h3{font-size:18px;font-weight:700;color:var(--text-1);margin:22px 0 10px;padding-left:10px;border-left:3px solid var(--primary)}
+.deep-dive h3:first-of-type{margin-top:0}
+.deep-dive p{font-size:15px;color:var(--text-2);line-height:1.85;margin-bottom:10px}
+.deep-dive ul{margin:8px 0 14px 20px}
+.deep-dive li{font-size:14px;color:var(--text-2);line-height:1.8;margin-bottom:4px}
+.deep-dive strong{color:var(--text-1)}
+.compare-table{width:100%;border-collapse:collapse;margin:12px 0 16px;font-size:13px}
+.compare-table th,.compare-table td{border:1px solid var(--border);padding:8px 12px;text-align:left}
+.compare-table th{background:var(--bg);font-weight:600;color:var(--text-1)}
+.compare-table td{color:var(--text-2)}
+
+/* 体验指南 */
+.guide-steps{display:grid;grid-template-columns:1fr;gap:0;counter-reset:step}
+.guide-step{
+  display:flex;gap:18px;padding:18px 0;border-bottom:1px dashed var(--border);
+}
+.guide-step:last-child{border-bottom:none}
+.guide-step .step-num{
+  counter-increment:step;flex-shrink:0;
+  width:36px;height:36px;border-radius:50%;
+  background:var(--primary);color:#fff;font-weight:800;font-size:16px;
+  display:flex;align-items:center;justify-content:center;
+}
+.guide-step .step-num::before{content:counter(step)}
+.guide-step .step-body h4{font-size:15px;font-weight:700;margin-bottom:4px;color:var(--text-1)}
+.guide-step .step-body p{font-size:13px;color:var(--text-2);line-height:1.75}
+
+/* FAQ */
+.faq-list{background:var(--bg-panel);border-radius:var(--radius-card);border:1px solid var(--border);overflow:hidden}
+.faq-list details{border-bottom:1px solid var(--border)}
+.faq-list details:last-child{border-bottom:none}
+.faq-list summary{
+  padding:15px 20px;font-size:15px;font-weight:600;color:var(--text-1);
+  cursor:pointer;list-style:none;display:flex;align-items:center;gap:10px;
+  transition:background .15s;
+}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary::before{content:"Q";flex-shrink:0;width:22px;height:22px;border-radius:6px;background:var(--primary-light);color:var(--primary);font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.faq-list summary:hover{background:#fdfbf9}
+.faq-list summary::after{content:"+";margin-left:auto;font-size:18px;color:var(--text-3);transition:transform .2s}
+.faq-list details[open] summary::after{transform:rotate(45deg)}
+.faq-list .faq-answer{padding:0 20px 16px 52px;font-size:14px;color:var(--text-2);line-height:1.8}
+
+/* 评论 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.comment-card{background:var(--bg-panel);border:1px solid var(--border);border-radius:var(--radius-card);padding:14px 16px}
+.comment-card .c-head{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.comment-card .c-avatar{width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,#e8d5c4,#d4b8a0);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#7a5c3e}
+.comment-card .c-nick{font-size:13px;font-weight:600;color:var(--text-1)}
+.comment-card .c-time{font-size:11px;color:var(--text-3);margin-left:auto}
+.comment-card .c-text{font-size:13px;color:var(--text-2);line-height:1.7}
+
+/* 资讯 */
+.news-list{display:flex;flex-direction:column;gap:0}
+.news-item{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--border);align-items:flex-start}
+.news-item:last-child{border-bottom:none}
+.news-item .n-date{font-size:12px;color:var(--text-3);width:80px;flex-shrink:0;padding-top:2px;font-variant-numeric:tabular-nums}
+.news-item .n-body{flex:1;min-width:0}
+.news-item .n-title{font-size:15px;font-weight:600;color:var(--text-1);margin-bottom:3px}
+.news-item .n-title:hover{color:var(--primary)}
+.news-item .n-summary{font-size:13px;color:var(--text-2);line-height:1.65}
+
+/* 相关推荐标签 */
+.rec-tags{display:flex;flex-wrap:wrap;gap:8px}
+.rec-tags a{
+  font-size:13px;padding:6px 14px;border-radius:20px;
+  background:var(--bg-panel);border:1px solid var(--border);color:var(--text-2);
+  transition:background .15s,color .15s,border-color .15s;
+}
+.rec-tags a:hover{background:var(--primary-light);color:var(--primary);border-color:var(--primary)}
+
+/* 榜单 */
+.rank-list{background:var(--bg-panel);border-radius:var(--radius-card);border:1px solid var(--border);overflow:hidden}
+.rank-item{display:flex;align-items:center;gap:14px;padding:12px 18px;border-bottom:1px solid var(--border)}
+.rank-item:last-child{border-bottom:none}
+.rank-item .rank-num{width:24px;height:24px;border-radius:6px;background:var(--bg);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:var(--text-3);flex-shrink:0}
+.rank-item:nth-child(1) .rank-num{background:var(--primary);color:#fff}
+.rank-item:nth-child(2) .rank-num{background:var(--accent);color:#fff}
+.rank-item:nth-child(3) .rank-num{background:#c98a3c;color:#fff}
+.rank-item .rank-name{font-size:14px;font-weight:600;color:var(--text-1);flex:1}
+.rank-item .rank-value{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums}
+
+/* 右侧辅助栏 */
+.right-sidebar{display:flex;flex-direction:column;gap:20px;position:sticky;top:calc(var(--sticky-h) + 16px)}
+.side-panel{background:var(--bg-panel);border:1px solid var(--border);border-radius:var(--radius-card);padding:18px;box-shadow:var(--shadow-sm)}
+.side-panel h3{font-size:15px;font-weight:700;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:6px}
+.side-panel h3::before{content:"";width:3px;height:14px;background:var(--primary);border-radius:2px}
+.side-hot-list{display:flex;flex-direction:column;gap:0}
+.side-hot-item{display:flex;gap:10px;align-items:baseline;padding:8px 0;border-bottom:1px dashed var(--border);font-size:13px}
+.side-hot-item:last-child{border-bottom:none}
+.side-hot-item .sh-rank{color:var(--primary);font-weight:800;font-size:12px;width:18px;flex-shrink:0}
+.side-hot-item .sh-name{color:var(--text-2);flex:1;line-height:1.4}
+.side-hot-item .sh-value{color:var(--text-3);font-size:11px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.side-topic-list{display:flex;flex-wrap:wrap;gap:6px}
+.side-topic-list a{font-size:12px;padding:3px 10px;border-radius:12px;background:var(--bg);color:var(--text-2);transition:background .15s,color .15s}
+.side-topic-list a:hover{background:var(--primary-light);color:var(--primary)}
+.side-update-feed{display:flex;flex-direction:column;gap:0}
+.side-update-item{font-size:12px;padding:7px 0;border-bottom:1px dashed var(--border);display:flex;gap:8px;align-items:baseline}
+.side-update-item:last-child{border-bottom:none}
+.side-update-item .su-time{color:var(--text-3);flex-shrink:0;font-variant-numeric:tabular-nums}
+.side-update-item .su-text{color:var(--text-2);line-height:1.4}
+
+/* 页尾 */
+.site-footer{background:#1c1214;color:rgba(255,255,255,.65);padding:40px 20px 28px;font-size:13px}
+.footer-inner{max-width:1360px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;margin-bottom:28px}
+.footer-brand .f-logo{font-size:20px;font-weight:800;color:#f0c674;margin-bottom:10px}
+.footer-brand .f-desc{font-size:13px;line-height:1.8;color:rgba(255,255,255,.55);max-width:300px}
+.footer-col h4{font-size:14px;font-weight:600;color:rgba(255,255,255,.85);margin-bottom:12px}
+.footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.5);padding:4px 0;transition:color .15s}
+.footer-col a:hover{color:#f0c674}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:rgba(255,255,255,.35)}
+.footer-bottom .f-note{line-height:1.7}
+
+/* 回到顶部 */
+.back-to-top{
+  position:fixed;right:24px;bottom:28px;z-index:90;
+  width:42px;height:42px;border-radius:50%;background:var(--primary);color:#fff;
+  border:none;display:flex;align-items:center;justify-content:center;
+  font-size:18px;box-shadow:var(--shadow-md);
+  opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+}
+.back-to-top.visible{opacity:1;pointer-events:auto}
+.back-to-top:hover{transform:translateY(-2px)}
+.back-to-top:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* 移动菜单遮罩 */
+.menu-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:98}
+.menu-overlay.active{display:block}
+
+/* 响应式 */
+@media (max-width:1100px){
+  .portal-grid{grid-template-columns:170px 1fr}
+  .right-sidebar{display:none}
+  .hero-inner{grid-template-columns:1fr;gap:28px}
+  .hero-side-card{display:none}
+}
+@media (max-width:1024px){
+  .portal-grid{grid-template-columns:1fr}
+  .channel-sidebar{position:static;display:none}
+  .main-nav{display:none}
+  .hamburger{display:flex}
+  .header-actions .btn-outline{display:none}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .cat-grid{grid-template-columns:repeat(3,1fr)}
+  .comment-grid{grid-template-columns:1fr}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:740px){
+  .hero h1{font-size:28px}
+  .hero{padding:36px 16px 32px}
+  .hero-desc{font-size:14px}
+  .hero-stats{gap:18px}
+  .hero-stat .num{font-size:20px}
+  .card-grid{grid-template-columns:1fr}
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .update-item{flex-wrap:wrap;gap:4px 12px}
+  .update-item .u-name{min-width:0}
+  .update-item .u-summary{flex-basis:100%}
+  .news-item{flex-direction:column;gap:2px}
+  .news-item .n-date{width:auto}
+  .footer-top{grid-template-columns:1fr}
+  .layout-wrap{padding:0 14px}
+  .portal-grid{padding-top:20px}
+  .deep-dive{padding:20px 18px}
+  .announce-bar{padding:0 12px;gap:8px}
+  .announce-bar .announce-track{gap:16px}
+  .announce-bar .brand-mini{font-size:12px}
+  .back-to-top{right:14px;bottom:18px;width:38px;height:38px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce-bar" role="banner">
+  <span class="brand-mini">17500乐彩网</span>
+  <div class="announce-track">
+    <span class="announce-item"><span class="dot"></span><span class="announce-date">11月7日</span> 双色球第2026128期开奖：红球03 07 12 19 25 31，蓝球08</span>
+    <span class="announce-item"><span class="dot"></span><span class="announce-date">11月8日</span> 大乐透第2026129期预测数据已更新，12位分析师发布方案</span>
+    <span class="announce-item"><span class="dot"></span><span class="announce-date">11月6日</span> 福彩3D第2026302期销量突破1.2亿元，创近三个月新高</span>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="logo">
+      <svg class="logo-svg" viewBox="0 0 36 36" fill="none" aria-hidden="true">
+        <circle cx="18" cy="18" r="17" fill="#b5252e"/>
+        <circle cx="18" cy="18" r="13" stroke="#f0c674" stroke-width="1.5" fill="none"/>
+        <text x="18" y="23" text-anchor="middle" fill="#f0c674" font-size="12" font-weight="800" font-family="sans-serif">彩</text>
+      </svg>
+      <span class="logo-text">17500乐彩网</span>
+    </div>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="/#shuangseqiu" aria-current="page">双色球</a>
+      <a href="/#daletou">大乐透</a>
+      <a href="/#fucai3d">福彩3D</a>
+      <a href="/#qixingcai">七星彩</a>
+      <a href="/#zoushitu">走势图</a>
+      <a href="/#yuce">预测分析</a>
+      <a href="/#tougao">投稿</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn-outline" type="button" id="searchToggleBtn">搜索号码</button>
+      <button class="btn-solid" type="button">登录</button>
+    </div>
+    <button class="hamburger" type="button" aria-label="打开菜单" aria-expanded="false" id="hamburgerBtn">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true"></div>
+
+<!-- 首屏 -->
+<section class="hero">
+  <svg class="hero-svg-visual" viewBox="0 0 520 420" fill="none" aria-hidden="true">
+    <circle cx="380" cy="180" r="150" stroke="rgba(240,198,116,.15)" stroke-width="1"/>
+    <circle cx="380" cy="180" r="110" stroke="rgba(240,198,116,.12)" stroke-width="1"/>
+    <circle cx="380" cy="180" r="70" stroke="rgba(240,198,116,.1)" stroke-width="1"/>
+    <circle cx="320" cy="130" r="18" fill="rgba(181,37,46,.4)"/>
+    <circle cx="420" cy="110" r="14" fill="rgba(240,198,116,.25)"/>
+    <circle cx="450" cy="220" r="22" fill="rgba(181,37,46,.3)"/>
+    <circle cx="350" cy="260" r="12" fill="rgba(240,198,116,.2)"/>
+    <path d="M280 320 L380 180 L480 300" stroke="rgba(240,198,116,.1)" stroke-width="1.5"/>
+  </svg>
+  <div class="hero-inner">
+    <div>
+      <span class="hero-badge">数字彩数据与预测服务</span>
+      <h1>17500乐彩网</h1>
+      <p class="hero-desc">汇集双色球、大乐透、福彩3D、七星彩最新开奖号码，提供红蓝球走势图、遗漏数据、和值跨度分析，以及多位分析师每期的胆码杀号方案，帮助彩民在投注前做出有据可依的判断。</p>
+      <div class="hero-actions">
+        <a href="/#shuangseqiu" class="btn-hero-main">查看双色球开奖</a>
+        <a href="/#yuce" class="btn-hero-ghost">本期预测方案</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><span class="num">128</span><span class="label">期开奖数据覆盖</span></div>
+        <div class="hero-stat"><span class="num">12</span><span class="label">在榜分析师</span></div>
+        <div class="hero-stat"><span class="num">6</span><span class="label">彩种走势图</span></div>
+      </div>
+    </div>
+    <div class="hero-side-card">
+      <h3>11月7日 开奖速览</h3>
+      <div class="hero-side-item"><span class="name">双色球 2026128期</span><span class="val">03 07 12 19 25 31 + 08</span></div>
+      <div class="hero-side-item"><span class="name">大乐透 2026128期</span><span class="val">05 11 18 29 33 + 03 09</span></div>
+      <div class="hero-side-item"><span class="name">福彩3D 2026301期</span><span class="val">4 7 2</span></div>
+      <div class="hero-side-item"><span class="name">七星彩 2026128期</span><span class="val">1 6 3 8 2 9 5</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 主体区域 -->
+<div class="layout-wrap">
+  <div class="portal-grid">
+
+    <!-- 左侧频道索引 -->
+    <aside class="channel-sidebar" aria-label="彩种频道">
+      <h2>彩种频道</h2>
+      <nav class="channel-list" aria-label="彩种导航">
+        <a href="/#shuangseqiu">双色球 <span class="count">128期</span></a>
+        <a href="/#daletou">大乐透 <span class="count">128期</span></a>
+        <a href="/#fucai3d">福彩3D <span class="count">301期</span></a>
+        <a href="/#qixingcai">七星彩 <span class="count">128期</span></a>
+        <a href="/#zoushitu">走势图 <span class="count">6种</span></a>
+        <a href="/#yuce">预测分析 <span class="count">12人</span></a>
+        <a href="/#guize">玩法规则 <span class="count">8篇</span></a>
+        <a href="/#tougao">彩民投稿 <span class="count">34篇</span></a>
+        <a href="/#pinglun">用户评论 <span class="count">16条</span></a>
+        <a href="/#zixun">彩票资讯 <span class="count">6条</span></a>
+      </nav>
+      <div class="quick-box">
+        <strong>快捷查询</strong>
+        输入期号可查询历史开奖号码与和值、跨度、奇偶比等指标。
+      </div>
+    </aside>
+
+    <!-- 中部主内容 -->
+    <main class="main-content">
+
+      <!-- 板块1：领域概览 -->
+      <section class="section" id="gaishu">
+        <div class="section-head"><h2>数字彩领域概览</h2></div>
+        <div class="overview-text">
+          <p>数字彩的核心玩法围绕号码组合展开，国内彩民接触最多的品类集中在双色球、超级大乐透、福彩3D和七星彩四类。<strong>双色球</strong>由6个红球（01-33）加1个蓝球（01-16）构成，头奖概率约1772万分之一；<strong>大乐透</strong>采用前区5个号码（01-35）加后区2个号码（01-12），头奖概率约2142万分之一。两者每期销量均在3亿元上下浮动，奖池规模直接影响追加投注的收益预期。</p>
+          <p>福彩3D是三位数排列玩法，号码从000到999共1000种组合，直选单注奖金1040元，组选三和组选六奖金分别为346元和173元。七星彩则由7位数字组成，前6位从0-9中选取，第7位从0-14中选取，头奖概率为1000万分之一。四类彩种的开奖频率不同——双色球和大乐透每周二、四、日开奖，福彩3D每日开奖，七星彩每周二、五、日开奖。</p>
+          <p>彩民在选号前通常会参考三类数据：一是<strong>历史开奖号码</strong>，用于判断冷热号分布；二是<strong>走势图</strong>，包括红球遗漏值、蓝球振幅、和值区间、跨度分布等指标；三是<strong>分析师方案</strong>，涵盖胆码、杀号、复式推荐和单式参考。值得留意的是，这些数据只能反映历史统计特征，每一期开奖结果仍为独立随机事件，任何方案的命中率都不能脱离概率基准来评估。</p>
+        </div>
+      </section>
+
+      <!-- 板块2：精选内容推荐 -->
+      <section class="section" id="shuangseqiu">
+        <div class="section-head">
+          <h2>双色球与大乐透精选方案</h2>
+          <a href="/#yuce" class="more-link">更多方案 →</a>
+        </div>
+        <div class="card-grid">
+          <article class="content-card">
+            <div class="card-img-wrap"><img src="https://picsum.photos/seed/ssq128ball/400/300" alt="双色球2026128期红球走势分析图" width="400" height="300" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-type">双色球 · 走势分析</span>
+              <h3 class="card-title">2026128期红球三区比解读</h3>
+              <p class="card-desc">上期红球三区比为2:2:2，近10期一区(01-11)出号23个、二区(12-22)出号19个、三区(23-33)出号18个，一区热度持续偏高。本期关注二区回补，重点号码14、17、20。</p>
+              <div class="card-meta"><span class="tag">三区比</span><span class="tag">遗漏值</span><span class="hot">热度 2.3万</span></div>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-img-wrap"><img src="https://picsum.photos/seed/dlt129front/400/300" alt="大乐透2026129期前区号码分布图" width="400" height="300" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-type">大乐透 · 胆码推荐</span>
+              <h3 class="card-title">2026129期前区五码定胆</h3>
+              <p class="card-desc">前区近期连号出现频率为每3.2期一次，上期开出18、29两枚邻号。本期胆码推荐07、15、22、30，防重号33。后区关注小大组合，02配09或04配11。</p>
+              <div class="card-meta"><span class="tag">前区胆码</span><span class="tag">连号</span><span class="hot">热度 1.9万</span></div>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-img-wrap"><img src="https://picsum.photos/seed/ssq128blue/400/300" alt="双色球蓝球振幅走势图" width="400" height="300" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-type">双色球 · 蓝球专项</span>
+              <h3 class="card-title">蓝球08开出后的跟随规律</h3>
+              <p class="card-desc">统计近30期蓝球数据，08出现后下一期落在01-04区间的次数为4次，落在13-16区间的次数为3次。本期蓝球建议主看小号区，备选03、05、07，防14冷回补。</p>
+              <div class="card-meta"><span class="tag">蓝球振幅</span><span class="tag">跟随统计</span><span class="hot">热度 1.6万</span></div>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-img-wrap"><img src="https://picsum.photos/seed/dlt129back/400/300" alt="大乐透后区组合分布图" width="400" height="300" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-type">大乐透 · 后区组合</span>
+              <h3 class="card-title">后区双数组合遗漏27期</h3>
+              <p class="card-desc">后区双数组合（如02+08、04+10）自2026102期开出后已遗漏27期，接近近两年最大遗漏值32期。本期可适度关注双数组合回补，04+10、06+12为备选参考。</p>
+              <div class="card-meta"><span class="tag">后区组合</span><span class="tag">遗漏回补</span><span class="hot">热度 1.4万</span></div>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-img-wrap"><img src="https://picsum.photos/seed/ssq128hot/400/300" alt="双色球近20期热号冷号统计表" width="400" height="300" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-type">双色球 · 冷热统计</span>
+              <h3 class="card-title">近20期热号TOP5与冷号预警</h3>
+              <p class="card-desc">红球热号前五为07（出现7次）、19（6次）、25（6次）、31（5次）、12（5次）。冷号方面，04已遗漏18期、16遗漏15期、28遗漏14期。冷号回补概率随遗漏值增长而上升，但需结合区间分布判断。</p>
+              <div class="card-meta"><span class="tag">热号</span><span class="tag">冷号</span><span class="hot">热度 1.2万</span></div>
+            </div>
+          </article>
+          <article class="content-card">
+            <div class="card-img-wrap"><img src="https://picsum.photos/seed/qxc128/400/300" alt="七星彩2026128期号码走势" width="400" height="300" loading="lazy"></div>
+            <div class="card-body">
+              <span class="card-type">七星彩 · 号码分析</span>
+              <h3 class="card-title">七星彩第7位大号区连出3期</h3>
+              <p class="card-desc">第7位（0-14）近3期开出12、13、9，大号区（10-14）占比偏高。前6位数字中，第3位连续5期未出现偶数，可关注2、4、6回补。本期综合推荐：1 6 4 8 2 9 7。</p>
+              <div class="card-meta"><span class="tag">第7位</span><span class="tag">奇偶比</span><span class="hot">热度 0.9万</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 板块3：最新更新动态 -->
+      <section class="section" id="zixun">
+        <div class="section-head"><h2>开奖与数据更新动态</h2></div>
+        <div class="update-list">
+          <div class="update-item"><span class="u-date">11月7日 21:15</span><span class="u-name">双色球2026128期</span><span class="u-summary">红球03 07 12 19 25 31，蓝球08，一等奖开出7注，单注奖金823万元，奖池滚存至24.6亿元。</span><span class="u-badge">开奖</span></div>
+          <div class="update-item"><span class="u-date">11月7日 20:30</span><span class="u-name">大乐透2026128期</span><span class="u-summary">前区05 11 18 29 33，后区03 09，一等奖3注，其中1注追加，追加奖金648万元。</span><span class="u-badge">开奖</span></div>
+          <div class="update-item"><span class="u-date">11月7日 19:00</span><span class="u-name">福彩3D第2026301期</span><span class="u-summary">开奖号码4 7 2，和值13，跨度5，组六形态，全国销量1.18亿元。</span><span class="u-badge">开奖</span></div>
+          <div class="update-item"><span class="u-date">11月6日 16:40</span><span class="u-name">双色球红球遗漏数据</span><span class="u-summary">04号红球遗漏值升至18期，16号遗漏15期，28号遗漏14期，三枚号码均进入近半年遗漏值前10%区间。</span><span class="u-badge">数据</span></div>
+          <div class="update-item"><span class="u-date">11月6日 10:20</span><span class="u-name">大乐透后区走势图</span><span class="u-summary">新增后区双数组合遗漏统计功能，可查看自2025001期以来的全部双数组合出现间隔。</span><span class="u-badge">功能</span></div>
+          <div class="update-item"><span class="u-date">11月5日 14:00</span><span class="u-name">七星彩第2026127期</span><span class="u-summary">开奖号码1 6 3 8 2 9 12，第7位开出12，该位近5期第4次落在10-14区间。</span><span class="u-badge">开奖</span></div>
+          <div class="update-item"><span class="u-date">11月5日 09:30</span><span class="u-name">分析师方案更新</span><span class="u-summary">12位在榜分析师已发布双色球2026129期方案，其中8位看好奇数回补，4位看好偶数延续。</span><span class="u-badge">预测</span></div>
+          <div class="update-item"><span class="u-date">11月4日 18:15</span><span class="u-name">福彩3D和值分布</span><span class="u-summary">近30期和值集中在9-17区间，占比73.3%，极端和值（0-5或22-27）仅出现2次。</span><span class="u-badge">数据</span></div>
+          <div class="update-item"><span class="u-date">11月4日 11:00</span><span class="u-name">双色球销量公告</span><span class="u-summary">第2026127期全国销量3.82亿元，较上期增长4.1%，广东、浙江、江苏三省销量居前。</span><span class="u-badge">销量</span></div>
+          <div class="update-item"><span class="u-date">11月3日 15:45</span><span class="u-name">大乐透奖池公告</span><span class="u-summary">第2026128期开奖后奖池滚存8.94亿元，下期一等奖派奖总额预计不低于1200万元。</span><span class="u-badge">奖池</span></div>
+        </div>
+      </section>
+
+      <!-- 板块4：分类入口 -->
+      <section class="section" id="guize">
+        <div class="section-head"><h2>玩法规则与数据分类</h2></div>
+        <div class="cat-grid">
+          <a href="/#shuangseqiu" class="cat-item"><span class="cat-icon">双</span><span class="cat-name">双色球规则</span><span class="cat-desc">红蓝球选号、奖级对照、复式投注说明</span></a>
+          <a href="/#daletou" class="cat-item"><span class="cat-icon">大</span><span class="cat-name">大乐透规则</span><span class="cat-desc">前区后区、追加投注、奖池分配机制</span></a>
+          <a href="/#fucai3d" class="cat-item"><span class="cat-icon">3D</span><span class="cat-name">福彩3D玩法</span><span class="cat-desc">直选组选、和值跨度、包点投注</span></a>
+          <a href="/#qixingcai" class="cat-item"><span class="cat-icon">七</span><span class="cat-name">七星彩规则</span><span class="cat-desc">七位数字、第7位选号范围、奖级设置</span></a>
+          <a href="/#zoushitu" class="cat-item"><span class="cat-icon">图</span><span class="cat-name">走势图工具</span><span class="cat-desc">红球遗漏、蓝球振幅、和值分布</span></a>
+          <a href="/#yuce" class="cat-item"><span class="cat-icon">析</span><span class="cat-name">预测分析</span><span class="cat-desc">胆码杀号、复式推荐、分析师方案</span></a>
+          <a href="/#tougao" class="cat-item"><span class="cat-icon">稿</span><span class="cat-name">彩民投稿</span><span class="cat-desc">选号心得、中奖经历、方法交流</span></a>
+          <a href="/#pinglun" class="cat-item"><span class="cat-icon">评</span><span class="cat-name">用户评论</span><span class="cat-desc">方案讨论、开奖反馈、经验分享</span></a>
+        </div>
+      </section>
+
+      <!-- 板块5：深度解析 -->
+      <section class="section" id="shenfenxi">
+        <div class="section-head"><h2>选号策略与数据判断</h2></div>
+        <div class="deep-dive">
+          <h3>冷热号的统计逻辑与实际边界</h3>
+          <p>“热号”指在特定统计周期内出现频率高于理论期望值的号码。以双色球红球为例，33个号码每期开出6个，单号理论出现概率约18.18%。统计近20期（共120个红球位置），07号出现7次、19号出现6次，均高于20期理论期望值3.6次。但出现频率高不能推导出下期继续出现的概率更高——每一期是独立抽取，热号延续与冷号回补在概率上并不构成因果关系。</p>
+          <p>这里需要区分两组数据：<strong>频率</strong>反映过去发生了什么，<strong>遗漏值</strong>反映某个号码多久没出现。04号红球当前遗漏18期，近半年最大遗漏值为22期。遗漏值接近历史极值时，部分彩民会将其视为“反弹信号”，但从概率模型看，单期开出概率仍为18.18%，不会因为遗漏了18期而改变。把冷热号当作缩减选号范围的参照可以，当作预测工具则容易高估其效力。</p>
+          <h3>和值与跨度的可核对拆解</h3>
+          <p>福彩3D的“和值”是三个开奖号码相加的结果，范围为0-27。近30期数据中，和值落在9-17区间的期数为22期，占比73.3%；和值≤5或≥22的期数合计仅2期。这个分布与理论概率基本吻合——9-17区间的组合数占全部1000种组合的71.4%。跨度指最大号码与最小号码的差值，范围为0-9。近30期跨度集中在4-7区间，占比56.7%。</p>
+          <p>拆开看，和值与跨度是两个独立维度：和值决定号码总量，跨度决定号码分散程度。和值12的组合可以是3+4+5（跨度2），也可以是0+5+7（跨度7）。只盯和值而不看跨度，选出的号码可能高度集中或过度分散。实际操作中，先定和值区间再筛跨度，比单看一个指标更有筛选价值。</p>
+          <h3>分析师方案的可信度分层</h3>
+          <p>站内12位分析师的方案在结构上分为三档：<strong>近30期命中率≥40%</strong>为第一档，共3人；<strong>30%-40%</strong>为第二档，共6人；<strong>低于30%</strong>为第三档，共3人。命中率的计算口径是“方案中至少包含1个当期开奖号码的期数”除以“推荐总期数”。这个口径偏宽松——包含1个号码就算命中，与“中奖”不是同一个概念。</p>
+          <table class="compare-table">
+            <thead><tr><th>可信度分层</th><th>近30期命中率</th><th>推荐方式</th><th>查看建议</th></tr></thead>
+            <tbody>
+              <tr><td>第一档（3人）</td><td>40%-46%</td><td>复式+单式组合，每期固定更新</td><td>当作号码池参考，不直接照搬</td></tr>
+              <tr><td>第二档（6人）</td><td>30%-39%</td><td>以胆码+杀号为主，偶发断更</td><td>比对2-3人方案取交集</td></tr>
+              <tr><td>第三档（3人）</td><td>22%-29%</td><td>单式推荐，更新不稳定</td><td>仅作覆盖参考，不优先采用</td></tr>
+            </tbody>
+          </table>
+          <p>命中率本身也有样本偏差：30期的样本量偏小，一位分析师连续命中3期就可能让命中率跳升10个百分点。判断方案质量时，同时看命中率、更新连续性和推荐号码的分布宽度，比只看一个百分比更可靠。</p>
+          <h3>复式投注的成本与覆盖权衡</h3>
+          <p>双色球红球复式7+1（选7个红球、1个蓝球）产生7注，投注金额14元；8+1产生28注，金额56元；9+1产生84注，金额168元。覆盖面随号码数量增加呈组合级增长，但每增加一个红球，成本增幅也在扩大。7+1到8+1的成本增幅是300%，8+1到9+1是200%。</p>
+          <p>以头奖概率计算，单注1772万分之一，7+1组合覆盖7种红球排列，概率提升至约253万分之一，但成本从2元升至14元，单位成本的覆盖效率反而低于多注单式分散投注。复式的价值在于“用一张票锁定一个号码池”，适合对某几个号码有明确判断的场景，不适合作为无差别覆盖的工具。</p>
+        </div>
+      </section>
+
+      <!-- 板块6：体验指南 -->
+      <section class="section" id="zhinan">
+        <div class="section-head"><h2>彩民查阅路径与判断顺序</h2></div>
+        <div class="guide-steps">
+          <div class="guide-step">
+            <div class="step-num"></div>
+            <div class="step-body">
+              <h4>先核对最新一期开奖号码</h4>
+              <p>确认上一期红蓝球或前区后区号码，记录和值、跨度、奇偶比、三区比四项指标。这四项是后续所有判断的基准，缺一项就会让后面的比较失去参照。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num"></div>
+            <div class="step-body">
+              <h4>再看近10期走势，而不是单期</h4>
+              <p>单期号码的偶然性太大。近10期的热号、冷号、连号频率、重号次数放在一起看，才能判断某个区间是持续活跃还是阶段性波动。10期是一个可操作的最小窗口。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num"></div>
+            <div class="step-body">
+              <h4>横向对比2-3位分析师的方案</h4>
+              <p>优先取第一档和第二档分析师，看他们的胆码是否有交集。两位以上分析师同时看好的号码，作为参考池的权重可以略高；只有一位提到的号码，单独成注的价值有限。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num"></div>
+            <div class="step-body">
+              <h4>用遗漏值做最后一道过滤</h4>
+              <p>把候选号码按遗漏值排序，剔除遗漏超过20期且近5期从未进入分析师推荐列表的号码。遗漏值本身不构成买入理由，但可以帮助排除长期无信号覆盖的号码。</p>
+            </div>
+          </div>
+          <div class="guide-step">
+            <div class="step-num"></div>
+            <div class="step-body">
+              <h4>控制单期投入，固定预算线</h4>
+              <p>单期投注金额设定上限，不因某期“感觉好”而临时加码。复式与单式的比例建议不超过总预算的40%，其余留作多期分散投注，降低单期波动的冲击。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块7：FAQ -->
+      <section class="section" id="faq">
+        <div class="section-head"><h2>彩民常见问题</h2></div>
+        <div class="faq-list">
+          <details>
+            <summary>双色球红球全偶组合多久出现一次？</summary>
+            <div class="faq-answer">红球6个号码全为偶数的组合共有C(16,6)种，占红球全部组合C(33,6)的约1.6%。按每期独立抽取计算，理论上平均约63期出现一次。2026年至今的128期中，全偶组合出现过2次，分别为2026053期（02 08 14 20 26 32）和2026101期（04 10 16 22 28 30），间隔48期，与理论均值偏差较大，说明短期统计波动明显。</div>
+          </details>
+          <details>
+            <summary>大乐透追加投注比基本投注多拿多少奖金？</summary>
+            <div class="faq-answer">追加投注每注多付1元，中一等奖时额外获得基本奖金的80%。以2026128期为例，基本投注一等奖单注奖金810万元，追加投注一等奖单注奖金为810万+648万=1458万元。追加仅对一等奖至五等奖有效，六等奖及以下不享受追加奖金。追加投注的性价比在一等奖奖池较高时更明显，奖池低于5亿元时，追加的边际收益相对有限。</div>
+          </details>
+          <details>
+            <summary>福彩3D组选三和组选六的区别是什么？</summary>
+            <div class="faq-answer">组选三指三个开奖号码中有两个相同，例如2 2 7，投注时只需选出这三个数字，不论顺序，单注奖金346元。组选六指三个号码各不相同，例如4 7 2，单注奖金173元。判断依据是开奖号码的形态：出现对子即为组三，三个号码全异为组六，三个号码全同为豹子，豹子不归入组三或组六。2026301期开出4 7 2，属于组六形态。</div>
+          </details>
+          <details>
+            <summary>走势图上的遗漏值到多少算“极值”？</summary>
+            <div class="faq-answer">没有统一标准，通常以该号码近两年或近300期的最大遗漏值为参照。以双色球红球04号为例，近300期最大遗漏值为24期，当前遗漏18期，已进入历史前10%区间。遗漏值接近或超过历史最大值时，部分彩民会重点关注，但从概率角度看，每期开出概率不受遗漏值影响。</div>
+          </details>
+          <details>
+            <summary>七星彩第7位选号范围为什么是0-14？</summary>
+            <div class="faq-answer">七星彩前6位各从0-9中选取，第7位单独从0-14中选取，共15个号码。这个设计使第7位的组合数多于前6位，整体头奖概率为1000万分之一（10的6次方乘以15）。第7位号码分布上，0-9与10-14的出现频率理论上应接近2:1，但实际开奖中10-14区间的出现频率往往略低于理论值，原因与摇奖设备的随机性有关，短期偏差属于正常波动。</div>
+          </details>
+          <details>
+            <summary>分析师说“杀号”是什么意思？准确率怎么算？</summary>
+            <div class="faq-answer">杀号指分析师判断某个或某几个号码本期不会开出，用于缩小选号范围。杀号准确率按“被杀的号码中实际开出个数为0”的期数占比计算。例如某分析师近30期每期杀3个红球，其中24期这3个号码均未开出，杀号准确率即为80%。需要注意，杀3个号码全不出现的理论概率约为C(30,6)/C(33,6)，约54%，所以80%的准确率虽高于基准，但样本仅30期，尚不足以证明稳定优势。</div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 板块8：用户评论 -->
+      <section class="section" id="pinglun">
+        <div class="section-head"><h2>彩民评论区</h2><span class="sub">16条留言</span></div>
+        <div class="comment-grid">
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">彩</span><span class="c-nick">老周看号</span><span class="c-time">11月7日 22:10</span></div><p class="c-text">128期蓝球08，我追了五期的07没出，08倒是防了一手。蓝球振幅这块最近确实不好抓，小号区连开三期了。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">数</span><span class="c-nick">数字游民阿凯</span><span class="c-time">11月7日 21:48</span></div><p class="c-text">一等奖7注，单注823万，奖池还滚到24.6亿。销量3.82亿比上期涨了4个点，广东那边是不是有人包号了。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">红</span><span class="c-nick">红球三区控</span><span class="c-time">11月7日 20:02</span></div><p class="c-text">三区比2:2:2，一区出号23个那个统计我核了一下，近十期一区确实偏热。不过14、17、20这三个号上期都没出，这期跟不跟还得看。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">大</span><span class="c-nick">大乐透追梦人</span><span class="c-time">11月7日 19:35</span></div><p class="c-text">后区双数组合遗漏27期了，这个数据挺有意思。04+10我连着买了八期没中，再跟两期看看，不行就换06+12。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">3</span><span class="c-nick">3D和值猎人</span><span class="c-time">11月7日 18:20</span></div><p class="c-text">和值13，跨度5，组六。我买的组三，又黑了。近30期组三才出9次，这频率是不是有点低。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">七</span><span class="c-nick">七星老彩</span><span class="c-time">11月6日 16:55</span></div><p class="c-text">第7位又开大号区，12。近五期四次落在10-14，这个区间最近确实活跃，下期要不要防一手小号回补？</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">冷</span><span class="c-nick">冷号观察员</span><span class="c-time">11月6日 14:12</span></div><p class="c-text">04号红球遗漏18期了，16也15期了。我翻了下近300期的数据，04最大遗漏24期，还没到顶。继续等。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">复</span><span class="c-nick">复式不归路</span><span class="c-time">11月6日 11:30</span></div><p class="c-text">9+1一张票168块，上期就中了两个红球。复式这玩意覆盖面确实大，但成本涨得太快，7+1到8+1直接翻四倍。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">胆</span><span class="c-nick">胆码只信两个</span><span class="c-time">11月5日 22:18</span></div><p class="c-text">第一档那三个分析师，这期两个都推了15和22，交集号可以关注一下。不过说真的，命中率40%也就是每期能蒙对一个号。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">杀</span><span class="c-nick">杀号不求人</span><span class="c-time">11月5日 20:40</span></div><p class="c-text">杀号准确率80%看着挺高，但杀3个号全不出的理论概率本来就54%，多出来的26个百分点用30期样本算，说服力有限。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">路</span><span class="c-nick">路人甲看开奖</span><span class="c-time">11月5日 17:05</span></div><p class="c-text">路过看一眼，最近广东销量挺猛，是不是有什么活动。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">奖</span><span class="c-nick">奖池盯着看</span><span class="c-time">11月4日 21:22</span></div><p class="c-text">大乐透奖池8.94亿，追加一等奖能到1458万。这个数字比基本投注高太多了，每注多一块钱换80%，长期算下来值不值？</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">跨</span><span class="c-nick">跨度控老李</span><span class="c-time">11月4日 15:50</span></div><p class="c-text">3D跨度4-7占了56.7%，我一般先定跨度再缩和值。上期跨度5，买的跨度6，差一个数。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">新</span><span class="c-nick">新手小陈</span><span class="c-time">11月3日 19:15</span></div><p class="c-text">刚接触双色球，看了三区比那个解释才搞明白01-11是一区。之前一直按1-10算，难怪对不上号。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">老</span><span class="c-nick">老彩民不追号</span><span class="c-time">11月3日 12:08</span></div><p class="c-text">全偶组合今年才出2次，间隔48期，这数据波动也太大了。理论上63期一次，48期和78期的间隔都算正常范围，别太当真。</p></div>
+          <div class="comment-card"><div class="c-head"><span class="c-avatar">随</span><span class="c-nick">随便看看不买</span><span class="c-time">11月2日 20:30</span></div><p class="c-text">走势图做得挺细的，红球遗漏能查到近300期。不过我不买，就看看数据图个乐。</p></div>
+        </div>
+      </section>
+
+      <!-- 板块9：相关资讯 -->
+      <section class="section" id="zixunlist">
+        <div class="section-head"><h2>彩票行业资讯</h2></div>
+        <div class="news-list">
+          <div class="news-item">
+            <span class="n-date">11月7日</span>
+            <div class="n-body">
+              <a href="/#zixun" class="n-title">双色球2026128期销量3.86亿元，广东单省贡献4120万元</a>
+              <p class="n-summary">本期全国销量较上期增长1.0%，广东、浙江、江苏三省合计占比28.7%。奖池滚存24.6亿元，下期一等奖派奖总额预计不低于1500万元。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="n-date">11月6日</span>
+            <div class="n-body">
+              <a href="/#zixun" class="n-title">大乐透奖池升至8.94亿元，追加投注占比连续三期超45%</a>
+              <p class="n-summary">2026128期追加投注占比45.3%，较2026120期的39.8%提升5.5个百分点。奖池突破8.9亿元后，追加一等奖单注奖金达到1458万元。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="n-date">11月5日</span>
+            <div class="n-body">
+              <a href="/#zixun" class="n-title">福彩3D第2026300期开出豹子号5 5 5，单期返奖率骤降至32%</a>
+              <p class="n-summary">豹子号每1000期理论出现1次，本次为2026年首次开出。当期全国销量1.09亿元，直选奖金派发总额约2100万元，返奖率低于常规的52%基准。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="n-date">11月4日</span>
+            <div class="n-body">
+              <a href="/#zixun" class="n-title">七星彩第2026127期第7位开出12，大号区近五期出现四次</a>
+              <p class="n-summary">第7位10-14区间在近五期开出四次，历史同期该区间出现频率约为33.3%。下一期2026129期将于11月8日晚开奖。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="n-date">11月3日</span>
+            <div class="n-body">
+              <a href="/#zixun" class="n-title">双色球红球04遗漏值升至18期，进入近300期前10%区间</a>
+              <p class="n-summary">04号红球自2026110期开出后未再出现，当前遗漏18期。近300期该号码最大遗漏值为24期，平均遗漏值为9.1期。</p>
+            </div>
+          </div>
+          <div class="news-item">
+            <span class="n-date">11月2日</span>
+            <div class="n-body">
+              <a href="/#zixun" class="n-title">12位分析师发布2026129期双色球方案，8人看好奇数回补</a>
+              <p class="n-summary">方案统计显示，奇数红球推荐占比58%，较上期方案提升11个百分点。蓝球方面，7人推荐小号区（01-08），5人推荐大号区。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 板块10：相关推荐 -->
+      <section class="section" id="tuijian">
+        <div class="section-head"><h2>相关数据与工具</h2></div>
+        <div class="rec-tags">
+          <a href="/#zoushitu">双色球红球遗漏表</a>
+          <a href="/#zoushitu">大乐透后区组合走势</a>
+          <a href="/#fucai3d">福彩3D和值分布图</a>
+          <a href="/#qixingcai">七星彩第7位号码统计</a>
+          <a href="/#yuce">2026129期胆码推荐</a>
+          <a href="/#guize">复式投注成本对照表</a>
+          <a href="/#shenfenxi">冷热号判断方法</a>
+          <a href="/#tougao">彩民选号心得投稿</a>
+        </div>
+      </section>
+
+      <!-- 板块11：补充板块 - 用户投稿 -->
+      <section class="section" id="tougao">
+        <div class="section-head"><h2>彩民投稿与经验交流</h2><span class="sub">本周新增4篇</span></div>
+        <div class="update-list">
+          <div class="update-item"><span class="u-date">11月6日</span><span class="u-name">《追了18期04号的心路》</span><span class="u-summary">作者：老周看号。记录从2026110期开始每期固定买04号红球的投入与心态变化，18期累计投入252元，最高中过2个红球。</span><span class="u-badge">心得</span></div>
+          <div class="update-item"><span class="u-date">11月5日</span><span class="u-name">《大乐透前区连号规律实测》</span><span class="u-summary">作者：数字游民阿凯。统计2025001期至2026128期共228期数据，连号出现率为34.2%，两连号占28.5%，三连号仅占5.7%。</span><span class="u-badge">方法</span></div>
+          <div class="update-item"><span class="u-date">11月4日</span><span class="u-name">《3D组三组六怎么配比》</span><span class="u-summary">作者：3D和值猎人。以近100期数据为样本，组三与组六的出现比例为27:73，据此设计了两种投注配比方案并记录20期执行结果。</span><span class="u-badge">方法</span></div>
+          <div class="update-item"><span class="u-date">11月2日</span><span class="u-name">《第一次中3D直选的经历》</span><span class="u-summary">作者：跨度控老李。2026295期开出4 7 2，作者以跨度5、和值13锁定组六，单注直选命中，奖金1040元。</span><span class="u-badge">经历</span></div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 右侧辅助栏 -->
+    <aside class="right-sidebar" aria-label="辅助信息">
+      <div class="side-panel">
+        <h3>热号榜（近10期）</h3>
+        <div class="side-hot-list">
+          <div class="side-hot-item"><span class="sh-rank">1</span><span class="sh-name">红球07</span><span class="sh-value">出现4次</span></div>
+          <div class="side-hot-item"><span class="sh-rank">2</span><span class="sh-name">红球19</span><span class="sh-value">出现3次</span></div>
+          <div class="side-hot-item"><span class="sh-rank">3</span><span class="sh-name">红球25</span><span class="sh-value">出现3次</span></div>
+          <div class="side-hot-item"><span class="sh-rank">4</span><span class="sh-name">红球31</span><span class="sh-value">出现3次</span></div>
+          <div class="side-hot-item"><span class="sh-rank">5</span><span class="sh-name">蓝球08</span><span class="sh-value">出现2次</span></div>
+          <div class="side-hot-item"><span class="sh-rank">6</span><span class="sh-name">蓝球14</span><span class="sh-value">出现2次</span></div>
+        </div>
+      </div>
+      <div class="side-panel">
+        <h3>实时更新</h3>
+        <div class="side-update-feed">
+          <div class="side-update-item"><span class="su-time">21:15</span><span class="su-text">双色球2026128期开奖号码已更新</span></div>
+          <div class="side-update-item"><span class="su-time">20:30</span><span class="su-text">大乐透2026128期开奖号码已更新</span></div>
+          <div class="side-update-item"><span class="su-time">19:00</span><span class="su-text">福彩3D第2026301期开奖号码已更新</span></div>
+          <div class="side-update-item"><span class="su-time">16:40</span><span class="su-text">红球遗漏数据刷新，04号升至18期</span></div>
+          <div class="side-update-item"><span class="su-time">09:30</span><span class="su-text">12位分析师2026129期方案已发布</span></div>
+        </div>
+      </div>
+      <div class="side-panel">
+        <h3>热门标签</h3>
+        <div class="side-topic-list">
+          <a href="/#shuangseqiu">三区比</a>
+          <a href="/#zoushitu">蓝球振幅</a>
+          <a href="/#daletou">后区组合</a>
+          <a href="/#fucai3d">和值分布</a>
+          <a href="/#yuce">胆码推荐</a>
+          <a href="/#yuce">杀号准确率</a>
+          <a href="/#guize">复式投注</a>
+          <a href="/#qixingcai">第7位走势</a>
+        </div>
+      </div>
+    </aside>
+
+  </div>
+</div>
+
+<!-- 页尾 -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="f-logo">17500乐彩网</div>
+        <p class="f-desc">聚合双色球、大乐透、福彩3D、七星彩的开奖数据与走势工具，覆盖2026年全部已开奖期次，提供每期更新与分析师方案参考。</p>
+      </div>
+      <div class="footer-col">
+        <h4>彩种数据</h4>
+        <a href="/#shuangseqiu">双色球开奖</a>
+        <a href="/#daletou">大乐透开奖</a>
+        <a href="/#fucai3d">福彩3D开奖</a>
+        <a href="/#qixingcai">七星彩开奖</a>
+      </div>
+      <div class="footer-col">
+        <h4>工具与规则</h4>
+        <a href="/#zoushitu">走势图工具</a>
+        <a href="/#yuce">预测分析</a>
+        <a href="/#guize">玩法规则</a>
+        <a href="/#shenfenxi">数据深度解析</a>
+      </div>
+      <div class="footer-col">
+        <h4>互动社区</h4>
+        <a href="/#tougao">彩民投稿</a>
+        <a href="/#pinglun">用户评论</a>
+        <a href="/#zixunlist">行业资讯</a>
+        <a href="/#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="f-note">示例数据页面 · 开奖信息以官方公布为准 · 彩票有风险，投注需理性</span>
+      <span>© 2026 17500乐彩网</span>
+    </div>
+  </div>
+</footer>
+
+<button class="back-to-top" type="button" aria-label="回到顶部" id="backToTop">↑</button>
+
+<script>
+(function(){
+  var hamburger = document.getElementById('hamburgerBtn');
+  var overlay = document.getElementById('menuOverlay');
+  var mainNav = document.querySelector('.main-nav');
+  var backToTop = document.getElementById('backToTop');
+  var menuOpen = false;
+
+  function openMenu(){
+    menuOpen = true;
+    mainNav.style.display = 'flex';
+    mainNav.style.position = 'fixed';
+    mainNav.style.top = 'calc(var(--announce-h) + var(--header-h))';
+    mainNav.style.left = '0';
+    mainNav.style.right = '0';
+    mainNav.style.background = '#fff';
+    mainNav.style.padding = '16px 20px';
+    mainNav.style.flexDirection = 'column';
+    mainNav.style.gap = '4px';
+    mainNav.style.boxShadow = '0 8px 24px rgba(0,0,0,.12)';
+    mainNav.style.zIndex = '99';
+    mainNav.style.maxHeight = 'calc(100vh - var(--announce-h) - var(--header-h))';
+    mainNav.style.overflowY = 'auto';
+    mainNav.querySelectorAll('a').forEach(function(a){
+      a.style.display = 'block';
+      a.style.padding = '10px 14px';
+    });
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden','false');
+    hamburger.setAttribute('aria-expanded','true');
+    hamburger.setAttribute('aria-label','关闭菜单');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu(){
+    menuOpen = false;
+    mainNav.style.display = '';
+    mainNav.style.position = '';
+    mainNav.style.top = '';
+    mainNav.style.left = '';
+    mainNav.style.right = '';
+    mainNav.style.background = '';
+    mainNav.style.padding = '';
+    mainNav.style.flexDirection = '';
+    mainNav.style.gap = '';
+    mainNav.style.boxShadow = '';
+    mainNav.style.zIndex = '';
+    mainNav.style.maxHeight = '';
+    mainNav.style.overflowY = '';
+    mainNav.querySelectorAll('a').forEach(function(a){
+      a.style.display = '';
+      a.style.padding = '';
+    });
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden','true');
+    hamburger.setAttribute('aria-expanded','false');
+    hamburger.setAttribute('aria-label','打开菜单');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function(){
+    if(menuOpen){ closeMenu(); } else { openMenu(); }
+  });
+  overlay.addEventListener('click', closeMenu);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && menuOpen){ closeMenu(); hamburger.focus(); }
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){
+      if(menuOpen){ closeMenu(); }
+    });
+  });
+
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > window.innerHeight * 0.8){
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }, {passive:true});
+
+  backToTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  document.getElementById('searchToggleBtn').addEventListener('click', function(){
+    var term = prompt('输入要查找的号码或期号（例如：04、2026128）');
+    if(!term) return;
+    var found = null;
+    var all = document.querySelectorAll('.update-item, .content-card, .news-item');
+    for(var i=0;i<all.length;i++){
+      if(all[i].textContent.indexOf(term) !== -1){
+        found = all[i];
+        break;
+      }
+    }
+    if(found){
+      found.scrollIntoView({behavior:'smooth', block:'center'});
+      found.style.outline = '2px solid var(--accent)';
+      setTimeout(function(){ found.style.outline = ''; }, 2000);
+    } else {
+      alert('未找到包含“' + term + '”的可见内容。');
+    }
+  });
+})();
+</script>
+
+</body>
+                </html>
