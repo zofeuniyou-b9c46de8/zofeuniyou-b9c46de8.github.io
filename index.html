@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>51高潮视频合集 - 成人内容聚合与分类索引</title>
+  <meta name="description" content="51高潮视频合集汇聚剧情、素人、情侣、自拍等成人视频分类，提供最新更新列表、精选条目卡片、深度解析与消费指南，适合希望按类型快速筛选的成年观众。">
+  <meta name="keywords" content="51高潮视频合集">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M20 44V20h10c8 0 14 5 14 12s-6 12-14 12H20zm8-8h4c4 0 6-2 6-4s-2-4-6-4h-4v8z' fill='%23f97316'/%3E%3C/svg%3E">
+  <style>
+    :root {
+      --brand: #c2410c;
+      --brand-soft: #fff7ed;
+      --brand-deep: #7c2d12;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --text: #1e293b;
+      --text-2: #475569;
+      --text-3: #94a3b8;
+      --line: #e2e8f0;
+      --radius-card: 16px;
+      --radius-btn: 10px;
+      --radius-tag: 999px;
+      --shadow: 0 1px 3px rgba(15, 23, 42, .06), 0 1px 2px rgba(15, 23, 42, .04);
+      --shadow-hover: 0 10px 24px rgba(15, 23, 42, .10);
+      --font: "PingFang SC", "Microsoft YaHei", "Noto Sans SC", system-ui, sans-serif;
+      --max-w: 1380px;
+      --sticky-h: 104px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: var(--sticky-h); }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: var(--font); font-size: 15px; line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    h1, h2, h3, h4 { margin: 0; line-height: 1.35; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding: 0; }
+    button { font-family: inherit; }
+    :focus-visible { outline: 3px solid var(--brand); outline-offset: 2px; }
+
+    .wrap { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+
+    /* 吸顶公告条 */
+    .announce {
+      background: linear-gradient(90deg, #7c2d12, #c2410c);
+      color: #fff; font-size: 13px;
+    }
+    .announce-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 7px 20px;
+      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+    }
+    .announce .brand-mini {
+      font-weight: 700; letter-spacing: .5px; color: #fed7aa;
+      white-space: nowrap;
+    }
+    .announce ul { display: flex; gap: 22px; list-style: none; flex-wrap: wrap; }
+    .announce li { white-space: nowrap; }
+    .announce time { color: #ffedd5; font-variant-numeric: tabular-nums; margin-right: 4px; }
+
+    /* 吸顶页头 */
+    .site-head {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255, 255, 255, .92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .head-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 12px 20px;
+      display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+    }
+    .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 19px; white-space: nowrap; }
+    .logo svg { width: 34px; height: 34px; flex: none; }
+    .logo span { color: var(--brand-deep); letter-spacing: .3px; }
+    .main-nav { display: flex; gap: 4px; flex-wrap: wrap; margin-left: auto; }
+    .main-nav a {
+      padding: 6px 12px; border-radius: var(--radius-btn); font-size: 14px;
+      color: var(--text-2); transition: background .18s, color .18s;
+    }
+    .main-nav a:hover { background: var(--brand-soft); color: var(--brand-deep); }
+    .head-search {
+      display: flex; align-items: center; gap: 6px;
+      border: 1px solid var(--line); border-radius: var(--radius-btn);
+      padding: 4px 6px 4px 12px; background: #fff;
+    }
+    .head-search input {
+      border: 0; outline: 0; font-size: 14px; width: 148px;
+      background: transparent; color: var(--text);
+    }
+    .head-search button {
+      border: 0; background: var(--brand); color: #fff; border-radius: 8px;
+      padding: 6px 12px; font-size: 13px; cursor: pointer;
+    }
+    .head-search button:hover { background: var(--brand-deep); }
+    .menu-btn {
+      display: none; border: 1px solid var(--line); background: #fff;
+      border-radius: 8px; padding: 7px 12px; font-size: 14px; cursor: pointer;
+    }
+
+    /* 首屏 */
+    .hero {
+      position: relative; overflow: hidden;
+      background:
+        radial-gradient(800px 320px at 82% -10%, rgba(249, 115, 22, .18), transparent 60%),
+        linear-gradient(160deg, #1e293b 0%, #0f172a 65%, #431407 100%);
+      color: #fff;
+    }
+    .hero::after {
+      content: ""; position: absolute; inset: auto -10% -60% auto; width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(249, 115, 22, .22), transparent 62%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 54px 20px 58px;
+      display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+      gap: 40px; align-items: center; position: relative; z-index: 1;
+    }
+    .hero-kicker {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(249, 115, 22, .16); border: 1px solid rgba(249, 115, 22, .4);
+      color: #fdba74; font-size: 13px; padding: 4px 12px; border-radius: var(--radius-tag);
+      margin-bottom: 16px;
+    }
+    .hero h1 { font-size: clamp(30px, 4.4vw, 46px); letter-spacing: 1px; margin-bottom: 14px; }
+    .hero h1 em { font-style: normal; color: #fb923c; }
+    .hero-desc { color: #cbd5e1; max-width: 560px; font-size: 15.5px; }
+    .hero-actions { display: flex; gap: 12px; margin-top: 22px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      border-radius: var(--radius-btn); padding: 10px 20px; font-size: 14.5px;
+      border: 1px solid transparent; cursor: pointer; transition: transform .18s, box-shadow .18s, background .18s;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #f97316; color: #fff; box-shadow: 0 6px 16px rgba(249, 115, 22, .35); }
+    .btn-primary:hover { background: #ea580c; }
+    .btn-ghost { background: rgba(255, 255, 255, .08); color: #f1f5f9; border-color: rgba(255, 255, 255, .25); }
+    .btn-ghost:hover { background: rgba(255, 255, 255, .16); }
+    .hero-stats { display: flex; gap: 26px; margin-top: 28px; flex-wrap: wrap; }
+    .hero-stats div strong { display: block; font-size: 21px; color: #fdba74; font-variant-numeric: tabular-nums; }
+    .hero-stats div span { font-size: 12.5px; color: #94a3b8; }
+
+    .hero-visual { position: relative; min-height: 300px; }
+    .hero-visual .card-stack {
+      position: absolute; border-radius: 18px; overflow: hidden;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .45);
+      border: 1px solid rgba(255, 255, 255, .14);
+      background: #1e293b;
+    }
+    .card-stack img { width: 100%; height: 100%; object-fit: cover; }
+    .hs-1 { width: 58%; aspect-ratio: 4/3; top: 0; right: 6%; transform: rotate(3deg); animation: floaty 6s ease-in-out infinite; }
+    .hs-2 { width: 52%; aspect-ratio: 4/3; bottom: 0; left: 0; transform: rotate(-3deg); }
+    .hs-3 { width: 42%; aspect-ratio: 1/1; bottom: 8%; right: 0; transform: rotate(6deg); }
+    @keyframes floaty { 0%,100% { transform: rotate(3deg) translateY(0); } 50% { transform: rotate(3deg) translateY(-8px); } }
+
+    /* 主布局 三栏 */
+    .layout {
+      max-width: var(--max-w); margin: 34px auto 0; padding: 0 20px;
+      display: grid; grid-template-columns: 178px minmax(0, 1fr) 248px; gap: 28px;
+      align-items: start;
+    }
+    .channel-nav {
+      position: sticky; top: calc(var(--sticky-h) + 16px);
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card);
+      padding: 14px 10px; box-shadow: var(--shadow);
+    }
+    .channel-nav h2 { font-size: 13px; color: var(--text-3); padding: 0 8px 8px; letter-spacing: 1px; }
+    .channel-nav ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+    .channel-nav a {
+      display: block; padding: 8px 10px; border-radius: 8px; font-size: 14px;
+      color: var(--text-2); transition: background .16s, color .16s;
+    }
+    .channel-nav a:hover, .channel-nav a.active { background: var(--brand-soft); color: var(--brand-deep); font-weight: 600; }
+
+    .content-main { min-width: 0; }
+    .content-aside { min-width: 0; }
+
+    /* 板块通用 */
+    .section { margin-bottom: 42px; scroll-margin-top: var(--sticky-h); }
+    .sec-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px; flex-wrap: wrap; }
+    .sec-head h2 { font-size: 21px; letter-spacing: .3px; }
+    .sec-head .sec-note { font-size: 13px; color: var(--text-3); }
+    .sec-head h2::before { content: ""; display: inline-block; width: 5px; height: 18px; background: var(--brand); border-radius: 3px; margin-right: 9px; vertical-align: -2px; }
+
+    /* 概览 */
+    .overview {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card);
+      padding: 24px 26px; box-shadow: var(--shadow); font-size: 15px; color: var(--text-2);
+    }
+    .overview p { margin-bottom: 12px; }
+    .overview strong { color: var(--text); }
+    .overview .kw { color: var(--brand-deep); font-weight: 700; }
+
+    /* 精选卡片 */
+    .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+    .v-card {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card);
+      overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column;
+      transition: transform .18s, box-shadow .18s;
+    }
+    .v-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-hover); }
+    .v-card .thumb { position: relative; aspect-ratio: 4/3; background: #e2e8f0; }
+    .v-card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .v-card .badge {
+      position: absolute; top: 9px; left: 9px; background: rgba(15, 23, 42, .78);
+      color: #fff; font-size: 11.5px; padding: 2px 9px; border-radius: var(--radius-tag);
+    }
+    .v-card .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 7px; flex: 1; }
+    .v-card h3 { font-size: 15.5px; }
+    .v-card .look { font-size: 13.2px; color: var(--text-2); line-height: 1.6; flex: 1; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      display: inline-block; font-size: 11.5px; padding: 2px 9px; border-radius: var(--radius-tag);
+      background: var(--brand-soft); color: var(--brand-deep); white-space: nowrap;
+    }
+    .meta-row { display: flex; justify-content: space-between; font-size: 12px; color: var(--text-3); }
+    .meta-row .hot { color: #dc2626; font-weight: 600; }
+
+    /* 最新更新列表 */
+    .update-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .update-list li {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 13px 16px; display: flex; gap: 14px; align-items: flex-start;
+      box-shadow: var(--shadow); transition: border-color .16s, box-shadow .16s;
+    }
+    .update-list li:hover { border-color: #fdba74; box-shadow: var(--shadow-hover); }
+    .update-list .u-title { font-weight: 600; font-size: 14.5px; flex: none; min-width: 150px; }
+    .update-list .u-sum { color: var(--text-2); font-size: 13.6px; }
+    .update-list .u-date { margin-left: auto; font-size: 12px; color: var(--text-3); flex: none; font-variant-numeric: tabular-nums; }
+
+    /* 分类入口 */
+    .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+    .cat-item {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 14px; display: flex; flex-direction: column; gap: 4px;
+      box-shadow: var(--shadow); transition: transform .16s, border-color .16s;
+    }
+    .cat-item:hover { transform: translateY(-2px); border-color: #fdba74; }
+    .cat-item strong { font-size: 14.5px; }
+    .cat-item span { font-size: 12px; color: var(--text-3); }
+
+    /* 深度解析 */
+    .deep-dive {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card);
+      padding: 28px 30px; box-shadow: var(--shadow); font-size: 15px; color: var(--text-2);
+    }
+    .deep-dive h3 { font-size: 17.5px; color: var(--text); margin: 26px 0 12px; }
+    .deep-dive h3:first-child { margin-top: 0; }
+    .deep-dive p { margin-bottom: 13px; }
+    .deep-dive ul { margin: 8px 0 14px 20px; }
+    .deep-dive li { margin-bottom: 6px; }
+    .deep-dive strong { color: var(--text); }
+    .callout {
+      border-left: 4px solid var(--brand); background: var(--brand-soft);
+      padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 14px 0; color: var(--brand-deep); font-size: 14px;
+    }
+
+    /* 体验指南 */
+    .guide-steps { counter-reset: step; display: flex; flex-direction: column; gap: 12px; }
+    .guide-step {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 16px 18px 16px 58px; position: relative; box-shadow: var(--shadow);
+    }
+    .guide-step::before {
+      counter-increment: step; content: counter(step);
+      position: absolute; left: 16px; top: 16px; width: 28px; height: 28px;
+      border-radius: 50%; background: var(--brand); color: #fff;
+      display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700;
+    }
+    .guide-step h3 { font-size: 15px; margin-bottom: 5px; }
+    .guide-step p { font-size: 13.8px; color: var(--text-2); margin: 0; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 10px; }
+    details {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      box-shadow: var(--shadow); overflow: hidden;
+    }
+    summary {
+      cursor: pointer; padding: 14px 18px; font-weight: 600; font-size: 14.5px;
+      list-style: none; display: flex; justify-content: space-between; gap: 12px; align-items: center;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "＋"; color: var(--brand); font-weight: 700; transition: transform .18s; }
+    details[open] summary::after { content: "－"; }
+    details .faq-a { padding: 0 18px 16px; color: var(--text-2); font-size: 14px; }
+
+    /* 评论 */
+    .comment-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; }
+    .comment {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 13px 15px; box-shadow: var(--shadow); font-size: 13.6px; color: var(--text-2);
+    }
+    .comment .who { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
+    .avatar {
+      width: 26px; height: 26px; border-radius: 50%; background: var(--brand-soft);
+      color: var(--brand-deep); display: flex; align-items: center; justify-content: center;
+      font-size: 12px; font-weight: 700; flex: none;
+    }
+    .comment .name { font-weight: 600; font-size: 13px; color: var(--text); }
+    .comment .time { margin-left: auto; font-size: 11.5px; color: var(--text-3); }
+
+    /* 资讯 */
+    .news-list { display: flex; flex-direction: column; gap: 12px; }
+    .news-item {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 15px 18px; box-shadow: var(--shadow);
+    }
+    .news-item h3 { font-size: 15px; margin-bottom: 3px; }
+    .news-item .n-date { font-size: 12px; color: var(--brand); font-weight: 600; margin-bottom: 5px; display: block; }
+    .news-item p { font-size: 13.5px; color: var(--text-2); margin: 0; }
+
+    /* 相关推荐 */
+    .rec-tags { display: flex; flex-wrap: wrap; gap: 9px; }
+    .rec-tags a {
+      font-size: 13.2px; padding: 7px 14px; border-radius: var(--radius-tag);
+      background: var(--surface); border: 1px solid var(--line); color: var(--text-2);
+      box-shadow: var(--shadow); transition: border-color .16s, color .16s, transform .16s;
+    }
+    .rec-tags a:hover { border-color: var(--brand); color: var(--brand-deep); transform: translateY(-2px); }
+
+    /* 补充榜单 */
+    .rank-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .rank-list li {
+      background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+      padding: 11px 15px; display: flex; align-items: center; gap: 12px; box-shadow: var(--shadow);
+    }
+    .rank-no {
+      width: 24px; height: 24px; border-radius: 7px; background: #f1f5f9; color: var(--text-2);
+      display: flex; align-items: center; justify-content: center; font-size: 12.5px; font-weight: 700; flex: none;
+    }
+    .rank-list li:nth-child(-n+3) .rank-no { background: var(--brand); color: #fff; }
+    .rank-list .r-name { font-weight: 600; font-size: 14px; }
+    .rank-list .r-info { margin-left: auto; font-size: 12px; color: var(--text-3); }
+
+    /* 侧栏 */
+    .side-box {
+      background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-card);
+      padding: 16px; box-shadow: var(--shadow); margin-bottom: 18px;
+    }
+    .side-box h2 { font-size: 15px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+    .side-box h2::before { content: ""; width: 4px; height: 15px; background: var(--brand); border-radius: 2px; }
+    .hot-rank { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .hot-rank li { display: flex; gap: 10px; align-items: flex-start; font-size: 13.4px; }
+    .hot-rank .n { color: var(--brand); font-weight: 800; font-size: 14px; width: 18px; flex: none; }
+    .hot-rank .t { color: var(--text-2); line-height: 1.5; }
+    .side-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+    .side-tags a { font-size: 12px; padding: 4px 10px; border-radius: var(--radius-tag); background: #f1f5f9; color: var(--text-2); }
+    .side-tags a:hover { background: var(--brand-soft); color: var(--brand-deep); }
+    .submit-box { background: linear-gradient(150deg, #fff7ed, #ffedd5); border-color: #fed7aa; }
+    .submit-box p { font-size: 13px; color: var(--brand-deep); margin-bottom: 10px; }
+    .submit-box .btn-primary { width: 100%; justify-content: center; padding: 9px 12px; font-size: 13.5px; }
+
+    /* 页尾 */
+    .site-foot { background: #0f172a; color: #94a3b8; margin-top: 56px; font-size: 13.5px; }
+    .foot-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 42px 20px 26px;
+      display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 30px;
+    }
+    .foot-brand { font-size: 17px; font-weight: 800; color: #f8fafc; margin-bottom: 10px; display: flex; align-items: center; gap: 9px; }
+    .foot-brand svg { width: 28px; height: 28px; }
+    .site-foot h3 { font-size: 13.5px; color: #e2e8f0; margin-bottom: 11px; letter-spacing: .5px; }
+    .site-foot ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+    .site-foot a:hover { color: #fdba74; }
+    .foot-bottom {
+      border-top: 1px solid #1e293b; padding: 16px 20px; text-align: center;
+      font-size: 12.5px; color: #64748b; max-width: var(--max-w); margin: 0 auto;
+    }
+
+    /* 回顶 */
+    .to-top {
+      position: fixed; right: 22px; bottom: 26px; z-index: 60;
+      width: 44px; height: 44px; border-radius: 50%; border: 0;
+      background: var(--brand); color: #fff; font-size: 19px; cursor: pointer;
+      box-shadow: 0 8px 20px rgba(194, 65, 12, .4);
+      opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: opacity .2s, transform .2s, visibility .2s;
+    }
+    .to-top.show { opacity: 1; visibility: visible; transform: translateY(0); }
+    .to-top:hover { background: var(--brand-deep); }
+
+    .empty-tip { text-align: center; color: var(--text-3); padding: 34px 0; font-size: 14px; display: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+
+    /* 平板 */
+    @media (max-width: 1024px) {
+      .layout { grid-template-columns: 1fr 240px; }
+      .channel-nav {
+        position: static; grid-column: 1 / -1; margin-bottom: 4px;
+        padding: 10px;
+      }
+      .channel-nav h2 { display: none; }
+      .channel-nav ul { flex-direction: row; flex-wrap: wrap; gap: 4px; }
+      .channel-nav a { padding: 6px 11px; font-size: 13.2px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 26px; }
+      .hero-visual { min-height: 240px; max-width: 480px; }
+      .foot-inner { grid-template-columns: 1fr 1fr; }
+    }
+    /* 手机 */
+    @media (max-width: 740px) {
+      .layout { grid-template-columns: 1fr; padding: 0 14px; }
+      .content-aside { order: 2; }
+      .channel-nav { order: 0; }
+      .main-nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: #fff; border-bottom: 1px solid var(--line); padding: 10px 16px 16px; flex-direction: column; gap: 2px; box-shadow: 0 12px 24px rgba(15,23,42,.1); }
+      .main-nav.open { display: flex; }
+      .main-nav a { padding: 10px 12px; font-size: 15px; }
+      .menu-btn { display: inline-block; margin-left: auto; }
+      .head-inner { position: relative; gap: 12px; }
+      .head-search { order: 3; width: 100%; }
+      .head-search input { width: 100%; flex: 1; }
+      .hero-inner { padding: 36px 16px 42px; }
+      .hero-stats { gap: 18px; }
+      .announce ul { gap: 12px; }
+      .announce li { font-size: 12px; }
+      .overview, .deep-dive { padding: 20px 18px; }
+      .foot-inner { grid-template-columns: 1fr; gap: 22px; }
+      .update-list li { flex-wrap: wrap; }
+      .update-list .u-date { margin-left: 0; }
+      :root { --sticky-h: 132px; }
+    }
+    @media (max-width: 420px) {
+      .card-grid, .comment-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="announce" role="region" aria-label="站点公告">
+  <div class="announce-inner">
+    <span class="brand-mini">51高潮视频合集</span>
+    <ul>
+      <li><time datetime="2026-11-08">11-08</time>「素人情侣深夜自拍」新增第 3 集</li>
+      <li><time datetime="2026-11-07">11-07</time>「剧情短片·合租屋」系列上线</li>
+      <li><time datetime="2026-11-05">11-05</time>精选分类新增「女导演视角」标签</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 吸顶页头 -->
+<header class="site-head">
+  <div class="head-inner">
+    <a class="logo" href="/#top" aria-label="51高潮视频合集首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f172a"/>
+        <path d="M20 44V20h10c8 0 14 5 14 12s-6 12-14 12H20zm8-8h4c4 0 6-2 6-4s-2-4-6-4h-4v8z" fill="#f97316"/>
+      </svg>
+      <span>51高潮视频合集</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    <nav class="main-nav" id="mainNav" aria-label="主导航">
+      <a href="/#overview">内容概览</a>
+      <a href="/#featured">精选推荐</a>
+      <a href="/#updates">最新动态</a>
+      <a href="/#categories">分类入口</a>
+      <a href="/#deepdive">深度解析</a>
+      <a href="/#guide">消费指南</a>
+      <a href="/#comments">用户评论</a>
+      <a href="/#news">相关资讯</a>
+    </nav>
+    <form class="head-search" id="searchForm" role="search" aria-label="站内内容搜索">
+      <input type="search" id="searchInput" placeholder="搜索条目名或类型…" aria-label="搜索输入框">
+      <button type="submit">搜索</button>
+    </form>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <span class="hero-kicker">成人类别 · 分类索引 · 每日更新</span>
+      <h1>51高潮视频合集</h1>
+      <p class="hero-desc">按剧情、素人情侣、自拍、女导演视角等类别归档的成人短片索引，提供每部作品的看点提要、类型标签和最新更新进度，适合成年观众按偏好快速定位。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#featured">浏览精选条目</a>
+        <a class="btn btn-ghost" href="/#categories">进入分类入口</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>1,264</strong><span>在档条目</span></div>
+        <div><strong>38</strong><span>今日更新</span></div>
+        <div><strong>12</strong><span>内容分类</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="card-stack hs-1"><img src="https://picsum.photos/seed/v51heroA/400/300" width="400" height="300" alt="剧情短片合租屋室内场景封面"></div>
+      <div class="card-stack hs-2"><img src="https://picsum.photos/seed/v51heroB/400/300" width="400" height="300" alt="素人情侣自拍系列夜景封面"></div>
+      <div class="card-stack hs-3"><img src="https://picsum.photos/seed/v51heroC/400/400" width="400" height="400" alt="女导演视角短片人物特写封面"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 三栏主布局 -->
+<div class="layout" id="layoutRoot">
+
+  <!-- 左频道栏 -->
+  <aside class="channel-nav" aria-label="频道分类导航">
+    <h2>频道</h2>
+    <ul>
+      <li><a href="/#featured" class="active">精选条目</a></li>
+      <li><a href="/#categories">剧情短片</a></li>
+      <li><a href="/#categories">素人情侣</a></li>
+      <li><a href="/#categories">自拍独白</a></li>
+      <li><a href="/#categories">女导演视角</a></li>
+      <li><a href="/#categories">合租屋系列</a></li>
+      <li><a href="/#categories">夜景外拍</a></li>
+      <li><a href="/#updates">更新进度</a></li>
+      <li><a href="/#rank">热度榜单</a></li>
+      <li><a href="/#submit">投稿互动</a></li>
+    </ul>
+  </aside>
+
+  <!-- 主内容 -->
+  <main class="content-main" id="mainContent">
+
+    <!-- 1 概览 -->
+    <section class="section" id="overview">
+      <div class="sec-head">
+        <h2>内容领域概览</h2>
+        <span class="sec-note">2026 年 11 月内容构成</span>
+      </div>
+      <div class="overview">
+        <p>这个合集覆盖的成人短片大致分四条主线：<strong>剧情向短片</strong>、<strong>素人情侣自拍</strong>、<strong>单人独白</strong>与<strong>女导演视角</strong>。剧情向以「合租屋」「夜班便利店」这类连续场景为主，拍摄周期通常在两周以上；素人情侣自拍多为单集 8—15 分钟，更新频率高，拍摄设备以手机为主；女导演视角是 2026 年 9 月后才成规模出现的标签，强调镜头语言而非直白记录。</p>
+        <p>值得关注的变化有三处。第一，「素人情侣深夜自拍」系列在 11 月 8 日更新至第 3 集，单集时长从 9 分钟拉长到 14 分钟，前两集在站内的完播率分别是 62% 和 71%。第二，剧情短片「合租屋」第二季于 11 月 7 日上线，首集 22 分钟，是目前在档条目中时长最长的一部。第三，分类入口新增「女导演视角」标签后，该标签下已归入 17 部作品，其中 6 部为 2026 年 10 月之后拍摄。</p>
+        <p>从消费端看，观众最常检索的类别词集中在「剧情短片」「素人情侣自拍」「合租屋系列」「夜景外拍」四类，合计占站内搜索量的 57%。这也解释了为什么分类入口按拍摄形态而非热度排列——拍摄形态更接近用户实际找片时的判断路径。</p>
+      </div>
+    </section>
+
+    <!-- 2 精选卡片 -->
+    <section class="section" id="featured">
+      <div class="sec-head">
+        <h2>精选条目推荐</h2>
+        <span class="sec-note">按编辑评分与更新进度挑选</span>
+      </div>
+      <div class="card-grid" id="cardGrid">
+        <article class="v-card" data-search="合租屋 第二季 剧情短片">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51hezu/400/300" width="400" height="300" loading="lazy" alt="合租屋第二季客厅场景封面">
+            <span class="badge">剧情短片</span>
+          </div>
+          <div class="body">
+            <h3>合租屋 第二季</h3>
+            <p class="look">延续第一季三主角合租设定，第二季首集 22 分钟，采用双线叙事，开场 6 分钟是长镜头调度，在同类剧情短片中少见。</p>
+            <div class="tag-list"><span class="tag">合租屋系列</span><span class="tag">双线叙事</span><span class="tag">长镜头</span></div>
+            <div class="meta-row"><span class="hot">热度 9.4</span><span>11-07 更新</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="素人情侣 深夜自拍 第3集">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51qinglv/400/300" width="400" height="300" loading="lazy" alt="素人情侣深夜自拍第三集夜景封面">
+            <span class="badge">素人情侣</span>
+          </div>
+          <div class="body">
+            <h3>素人情侣深夜自拍 第3集</h3>
+            <p class="look">单集 14 分钟，前两集完播率 62% 与 71%。第三集改为固定机位加手持穿插，对话比例明显高于前作。</p>
+            <div class="tag-list"><span class="tag">自拍</span><span class="tag">情侣</span><span class="tag">单集14分钟</span></div>
+            <div class="meta-row"><span class="hot">热度 9.1</span><span>11-08 更新</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="夜班便利店 剧情短片 夜班">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51bianli/400/300" width="400" height="300" loading="lazy" alt="夜班便利店短片货架场景封面">
+            <span class="badge">剧情短片</span>
+          </div>
+          <div class="body">
+            <h3>夜班便利店</h3>
+            <p class="look">全片 17 分钟，场景集中在一间 24 小时便利店，夜班店员与三位顾客的对话构成全部情节，台词密度高。</p>
+            <div class="tag-list"><span class="tag">便利店</span><span class="tag">夜班</span><span class="tag">对话驱动</span></div>
+            <div class="meta-row"><span class="hot">热度 8.7</span><span>10-29 上线</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="女导演视角 短片 镜头语言">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51daoyan/400/300" width="400" height="300" loading="lazy" alt="女导演视角短片人物特写封面">
+            <span class="badge">女导演视角</span>
+          </div>
+          <div class="body">
+            <h3>房间里的三个下午</h3>
+            <p class="look">17 部女导演视角标签作品中评分最高，全长 11 分钟，三个固定下午的室内场景，剪辑节奏慢，靠光线变化推进。</p>
+            <div class="tag-list"><span class="tag">女导演视角</span><span class="tag">室内</span><span class="tag">光线叙事</span></div>
+            <div class="meta-row"><span class="hot">热度 8.9</span><span>10-22 上线</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="夜景外拍 天台 短片">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51tian/400/300" width="400" height="300" loading="lazy" alt="夜景外拍天台城市灯光封面">
+            <span class="badge">夜景外拍</span>
+          </div>
+          <div class="body">
+            <h3>天台与城市灯光</h3>
+            <p class="look">拍摄地点是市区一栋 18 层住宅天台，全程自然光加一盏补光灯，城市灯光作为背景，运镜以缓慢横移为主。</p>
+            <div class="tag-list"><span class="tag">夜景外拍</span><span class="tag">天台</span><span class="tag">自然光</span></div>
+            <div class="meta-row"><span class="hot">热度 8.2</span><span>10-18 上线</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="单人独白 自拍 短集">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51dubai/400/300" width="400" height="300" loading="lazy" alt="单人独白自拍室内灯下封面">
+            <span class="badge">自拍独白</span>
+          </div>
+          <div class="body">
+            <h3>凌晨两点的独白</h3>
+            <p class="look">单集 9 分钟，全程单机位自拍，偏重口语化叙述，被评论区称为「适合背景播放的一集」，节奏接近播客。</p>
+            <div class="tag-list"><span class="tag">自拍独白</span><span class="tag">单机位</span><span class="tag">口语叙述</span></div>
+            <div class="meta-row"><span class="hot">热度 8.0</span><span>11-02 上线</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="合租屋 第一季 回顾">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51s1/400/300" width="400" height="300" loading="lazy" alt="合租屋第一季厨房场景封面">
+            <span class="badge">剧情短片</span>
+          </div>
+          <div class="body">
+            <h3>合租屋 第一季</h3>
+            <p class="look">共 6 集，单集 12—16 分钟。第二季上线后回看量上涨 34%，第一季结尾的开放式处理仍是评论区讨论焦点。</p>
+            <div class="tag-list"><span class="tag">合租屋系列</span><span class="tag">6集</span><span class="tag">开放式结局</span></div>
+            <div class="meta-row"><span class="hot">热度 8.5</span><span>09-15 完结</span></div>
+          </div>
+        </article>
+
+        <article class="v-card" data-search="素人情侣 厨房 周末">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/v51chufang/400/300" width="400" height="300" loading="lazy" alt="素人情侣厨房周末午后封面">
+            <span class="badge">素人情侣</span>
+          </div>
+          <div class="body">
+            <h3>周末厨房</h3>
+            <p class="look">11 月 1 日上线，单集 10 分钟，拍摄于自家厨房，午后自然光。评论区主要讨论收音质量，画面本身评价中性。</p>
+            <div class="tag-list"><span class="tag">素人情侣</span><span class="tag">厨房</span><span class="tag">自然光</span></div>
+            <div class="meta-row"><span class="hot">热度 7.6</span><span>11-01 上线</span></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-tip" id="emptyTip">没有匹配的条目，换个关键词试试，比如「合租屋」「情侣」「夜景」。</p>
+    </section>
+
+    <!-- 3 最新更新 -->
+    <section class="section" id="updates">
+      <div class="sec-head">
+        <h2>最新更新与动态</h2>
+        <span class="sec-note">2026-10-30 至 2026-11-08</span>
+      </div>
+      <ul class="update-list">
+        <li><span class="u-title">素人情侣深夜自拍 第3集</span><span class="u-sum">时长拉长到 14 分钟，固定机位与手持穿插，对话比例高于前两集。</span><span class="u-date">11-08</span></li>
+        <li><span class="u-title">合租屋 第二季 首集</span><span class="u-sum">22 分钟，双线叙事，开场 6 分钟长镜头，是目前在档最长条目。</span><span class="u-date">11-07</span></li>
+        <li><span class="u-title">女导演视角 标签扩容</span><span class="u-sum">新增 6 部 10 月后拍摄作品，该标签下累计 17 部。</span><span class="u-date">11-05</span></li>
+        <li><span class="u-title">凌晨两点的独白</span><span class="u-sum">单机位自拍 9 分钟，口语叙述为主，评论区称适合背景播放。</span><span class="u-date">11-02</span></li>
+        <li><span class="u-title">周末厨房</span><span class="u-sum">11 月 1 日上线，厨房午后自然光，收音质量成为评论焦点。</span><span class="u-date">11-01</span></li>
+        <li><span class="u-title">夜班便利店</span><span class="u-sum">17 分钟对话驱动短片，三位顾客与夜班店员构成全部情节。</span><span class="u-date">10-29</span></li>
+        <li><span class="u-title">房间里的三个下午</span><span class="u-sum">女导演视角标签评分最高，11 分钟、三固定下午、光线推进。</span><span class="u-date">10-22</span></li>
+        <li><span class="u-title">天台与城市灯光</span><span class="u-sum">18 层住宅天台外拍，自然光加一盏补光灯，运镜缓慢横移。</span><span class="u-date">10-18</span></li>
+        <li><span class="u-title">合租屋 第一季 回看上涨</span><span class="u-sum">第二季上线后第一季回看量上涨 34%，开放式结局仍是讨论点。</span><span class="u-date">11-08</span></li>
+        <li><span class="u-title">分类入口 搜索词统计</span><span class="u-sum">剧情短片、素人情侣自拍、合租屋系列、夜景外拍合计占搜索量 57%。</span><span class="u-date">11-06</span></li>
+      </ul>
+    </section>
+
+    <!-- 4 分类入口 -->
+    <section class="section" id="categories">
+      <div class="sec-head">
+        <h2>分类入口</h2>
+        <span class="sec-note">按拍摄形态与场景划分</span>
+      </div>
+      <div class="cat-grid">
+        <a class="cat-item" href="/#featured"><strong>剧情短片</strong><span>合租屋、夜班便利店等连续场景</span></a>
+        <a class="cat-item" href="/#featured"><strong>素人情侣自拍</strong><span>手机拍摄，单集 8—15 分钟</span></a>
+        <a class="cat-item" href="/#featured"><strong>自拍独白</strong><span>单机位，口语化叙述为主</span></a>
+        <a class="cat-item" href="/#featured"><strong>女导演视角</strong><span>2026 年 9 月后成规模的标签</span></a>
+        <a class="cat-item" href="/#featured"><strong>合租屋系列</strong><span>两季共 7 集，三主角设定</span></a>
+        <a class="cat-item" href="/#featured"><strong>夜景外拍</strong><span>天台、街道等户外夜景场景</span></a>
+        <a class="cat-item" href="/#featured"><strong>厨房与日常</strong><span>室内自然光，生活场景记录</span></a>
+        <a class="cat-item" href="/#featured"><strong>对话驱动</strong><span>台词密度高、情节靠对话推进</span></a>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="section" id="deepdive">
+      <div class="sec-head">
+        <h2>深度解析：类型差异与判断依据</h2>
+        <span class="sec-note">约 800 字</span>
+      </div>
+      <div class="deep-dive">
+        <h3>剧情短片与素人自拍：制作方式决定观看方式</h3>
+        <p>剧情短片的时长门槛已经抬到 17 分钟以上。以「夜班便利店」为例，17 分钟里只有一间便利店、一个店员、三位顾客，台词密度约每分钟 9 句，比早期同类作品的每分钟 5 句高出近一倍。这意味着观看时需要保持注意力，走神就容易漏掉关键对话。素人情侣自拍则相反，单集 8—15 分钟，镜头信息量低，适合碎片时间看。</p>
+        <p>两类作品的更新节奏差异也来自制作方式。「合租屋」第二季首集 22 分钟，拍摄周期两周以上；「素人情侣深夜自拍」第 3 集 14 分钟，从拍摄到上线不到一周。前者适合追更，后者适合按更新列表扫。</p>
+        <div class="callout">可核对的对比：剧情短片平均单集 18.3 分钟、平均更新间隔 12 天；素人情侣自拍平均单集 11.6 分钟、平均更新间隔 4 天。数据取自站内 2026 年 10 月 1 日至 11 月 8 日更新的 26 部作品。</div>
+
+        <h3>「女导演视角」标签到底新在哪</h3>
+        <p>这个标签 2026 年 9 月才出现在分类里，目前归入 17 部作品，其中 6 部拍于 10 月之后。与同题材其他作品相比，最大差异是镜头停留时间：标签内作品平均单个镜头 11 秒，站内其他作品平均 4 秒。镜头更长，剪辑点更少，叙事靠光线和空间变化推进。</p>
+        <p>「房间里的三个下午」是最典型的例子。11 分钟里只有三个固定下午的室内场景，光线从午后偏黄到傍晚偏蓝，观众能直接看到时间流逝。这种处理在站内其他分类里很少见。需要说明的是，标签是编辑按镜头语言归纳的，不是导演自报，因此存在归类争议——有 3 部作品的导演在评论区表示不认为自己属于这一视角。</p>
+
+        <h3>判断一部作品值不值得看：拆成三个可核对项</h3>
+        <p>站内评价容易笼统，把判断拆开更实用。第一看时长与类型是否匹配：剧情短片低于 15 分钟通常情节不完整，素人自拍超过 20 分钟则容易拖。第二看更新是否连续：系列作品两集之间超过 20 天，人物设定常出现断裂，「合租屋」第一季第 4 到第 5 集间隔 23 天，就有评论指出角色关系前后不一致。第三看评论区是否在讨论具体内容：讨论镜头、台词、收音质量的，比只写「好看」的更有参考价值。</p>
+        <ul>
+          <li>时长匹配：剧情短片 ≥15 分钟、素人自拍 8—15 分钟为常见合理区间。</li>
+          <li>更新间隔：系列作品超过 20 天需留意人物设定是否连贯。</li>
+          <li>评论质量：指向镜头、台词、收音的具体讨论优先。</li>
+        </ul>
+        <p>这三项不能保证作品合口味，但能过滤掉明显制作粗糙或宣传夸大的条目。以「周末厨房」为例，10 分钟、单集、评论区 7 条里有 4 条提到收音差，这类信号比评分更直接。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="section" id="guide">
+      <div class="sec-head">
+        <h2>体验指南：内容消费顺序与判断</h2>
+        <span class="sec-note">从类型到具体条目</span>
+      </div>
+      <div class="guide-steps">
+        <div class="guide-step">
+          <h3>先定类型再找条目</h3>
+          <p>时间充裕选剧情短片，17 分钟以上、台词密度高；碎片时间选素人情侣自拍，8—15 分钟一集，随时可停。</p>
+        </div>
+        <div class="guide-step">
+          <h3>用更新间隔判断系列连贯性</h3>
+          <p>系列作品两集间隔超过 20 天，人物关系容易断裂。「合租屋」第一季第 4 到第 5 集隔 23 天，评论区就出现了「角色态度突变」的反馈。</p>
+        </div>
+        <div class="guide-step">
+          <h3>看评论区在讨论什么</h3>
+          <p>讨论收音、镜头、台词的评论比单纯表态有用。「周末厨房」7 条评论中 4 条提收音差，这个信息比评分更能决定要不要看。</p>
+        </div>
+        <div class="guide-step">
+          <h3>同类条目比较先比时长与镜头</h3>
+          <p>「夜班便利店」17 分钟、对话驱动；「天台与城市灯光」12 分钟、运镜缓慢。前者需要专注，后者适合放松，按当下状态选。</p>
+        </div>
+        <div class="guide-step">
+          <h3>新标签作品先看一两部试水</h3>
+          <p>「女导演视角」标签内 17 部作品镜头风格相近，先看评分最高的「房间里的三个下午」，再决定是否继续。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="section" id="faq">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <span class="sec-note">按搜索问句整理</span>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>「合租屋」第二季和第一季的人物设定有变化吗？</summary>
+          <div class="faq-a">有。第二季首集 22 分钟，三主角仍是合租关系，但第一季结尾的开放式处理在第二季开场 6 分钟长镜头里被重新解释，其中一位角色的职业从第一季的便利店店员改为自由职业。两季间隔约 52 天，评论区对这次改动看法不一。</div>
+        </details>
+        <details>
+          <summary>素人情侣自拍为什么单集时长越来越长？</summary>
+          <div class="faq-a">从「素人情侣深夜自拍」系列看，前两集 9 分钟，第三集 14 分钟，拉长部分主要是对话和场景铺垫。完播率从 62% 升到 71%，说明观众对长一点的版本接受度更高。但超过 20 分钟的素人自拍在站内仍然少见，拖沓风险大。</div>
+        </details>
+        <details>
+          <summary>「女导演视角」是官方分类还是编辑归纳的？</summary>
+          <div class="faq-a">编辑按镜头语言归纳的，不是导演自报。目前 17 部作品，平均单个镜头 11 秒，站内其他作品平均 4 秒。有 3 部作品的导演在评论区表示不认为自己属于这一视角，归类存在争议。</div>
+        </details>
+        <details>
+          <summary>剧情短片低于 15 分钟是不是通常不完整？</summary>
+          <div class="faq-a">多数情况是。站内 2026 年 10 月更新的剧情短片平均 18.3 分钟，低于 15 分钟的条目通常在情节收束上偏仓促，尤其是双线叙事。例外是「房间里的三个下午」，11 分钟但靠光线推进，结构完整。</div>
+        </details>
+        <details>
+          <summary>系列作品两集间隔多久算正常？</summary>
+          <div class="faq-a">站内剧情短片平均更新间隔 12 天，素人自拍平均 4 天。超过 20 天，人物设定断裂的概率明显上升。「合租屋」第一季第 4 到第 5 集间隔 23 天，评论区就出现了角色态度前后不一致的反馈。</div>
+        </details>
+        <details>
+          <summary>「夜班便利店」和「天台与城市灯光」怎么选？</summary>
+          <div class="faq-a">「夜班便利店」17 分钟、对话驱动、台词密度约每分钟 9 句，需要专注看。「天台与城市灯光」12 分钟、自然光加一盏补光灯、运镜缓慢横移，适合放松时看。按当下注意力状态选更实际。</div>
+        </details>
+      </div>
+    </section>
+
+    <!-- 8 评论 -->
+    <section class="section" id="comments">
+      <div class="sec-head">
+        <h2>用户评论</h2>
+        <span class="sec-note">来自站内条目评论区</span>
+      </div>
+      <div class="comment-grid">
+        <div class="comment"><div class="who"><span class="avatar">林</span><span class="name">林间小路</span><span class="time">11-08</span></div>合租屋第二季第一集那个 6 分钟长镜头真的顶，但后面节奏突然慢下来，有点不适应。</div>
+        <div class="comment"><div class="who"><span class="avatar">阿</span><span class="name">阿哲不熬夜</span><span class="time">11-08</span></div>素人情侣深夜自拍第三集 14 分钟，比前两集好，对话多了不尴尬。</div>
+        <div class="comment"><div class="who"><span class="avatar">m</span><span class="name">momo酱</span><span class="time">11-07</span></div>女导演视角那个房间里的三个下午，看到最后才发现光变了三次，挺妙的。</div>
+        <div class="comment"><div class="who"><span class="avatar">陈</span><span class="name">陈师傅修车</span><span class="time">11-07</span></div>夜班便利店台词太密了，我中途回了个消息就跟不上了，得重看。</div>
+        <div class="comment"><div class="who"><span class="avatar">k</span><span class="name">kiki_77</span><span class="time">11-06</span></div>周末厨房收音确实差，厨房回声太大了，画面还行。</div>
+        <div class="comment"><div class="who"><span class="avatar">半</span><span class="name">半糖去冰</span><span class="time">11-06</span></div>合租屋第一季结尾那个开放式处理，到现在都没想明白，第二季会不会填坑。</div>
+        <div class="comment"><div class="who"><span class="avatar">夜</span><span class="name">夜猫子小刘</span><span class="time">11-05</span></div>天台那个片子的城市灯光拍得不错，就是运镜有点慢，我快进了两次。</div>
+        <div class="comment"><div class="who"><span class="avatar">q</span><span class="name">qwerty</span><span class="time">11-05</span></div>凌晨两点的独白适合当播客听，画面不用一直盯着。</div>
+        <div class="comment"><div class="who"><span class="avatar">大</span><span class="name">大橘为重</span><span class="time">11-04</span></div>最近更新太快了，三天不看列表就翻页了，追不过来。</div>
+        <div class="comment"><div class="who"><span class="avatar">z</span><span class="name">zoe在写稿</span><span class="time">11-03</span></div>女导演视角标签里有一部导演自己说不算，编辑是不是该重新归类。</div>
+        <div class="comment"><div class="who"><span class="avatar">麦</span><span class="name">麦子熟了</span><span class="time">11-02</span></div>素人情侣系列前两集完播率 62% 和 71%，第三集应该更高吧，时长都拉长了。</div>
+        <div class="comment"><div class="who"><span class="avatar">周</span><span class="name">周三下午</span><span class="time">11-01</span></div>剧情短片低于 15 分钟的基本都看不下去，除非是房间里的三个下午那种。</div>
+        <div class="comment"><div class="who"><span class="avatar">l</span><span class="name">lulu不吃香菜</span><span class="time">10-31</span></div>合租屋第一季第 4 到第 5 集隔了 23 天，回来人物关系都对不上了。</div>
+        <div class="comment"><div class="who"><span class="avatar">老</span><span class="name">老白干杯</span><span class="time">10-30</span></div>今天网速不太行，卡了好几次，不是片子的问题。</div>
+        <div class="comment"><div class="who"><span class="avatar">七</span><span class="name">七号同学</span><span class="time">10-29</span></div>夜班便利店我就喜欢台词密，一秒钟都不能走神那种。</div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="section" id="news">
+      <div class="sec-head">
+        <h2>相关资讯</h2>
+        <span class="sec-note">2026 年 10 月 18 日至 11 月 8 日</span>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <span class="n-date">2026-11-08</span>
+          <h3>素人情侣深夜自拍第三集上线，单集时长首破 14 分钟</h3>
+          <p>前两集完播率分别为 62% 和 71%，第三集改为固定机位与手持穿插，对话比例明显提升。</p>
+        </article>
+        <article class="news-item">
+          <span class="n-date">2026-11-07</span>
+          <h3>合租屋第二季首集上线，22 分钟创在档条目时长纪录</h3>
+          <p>开场 6 分钟长镜头采用双线叙事，第一季回看量在第二季上线后上涨 34%。</p>
+        </article>
+        <article class="news-item">
+          <span class="n-date">2026-11-05</span>
+          <h3>女导演视角标签扩容至 17 部，新增 6 部 10 月后拍摄作品</h3>
+          <p>标签内作品平均单个镜头 11 秒，站内其他作品平均 4 秒，归类争议仍存。</p>
+        </article>
+        <article class="news-item">
+          <span class="n-date">2026-11-02</span>
+          <h3>凌晨两点的独白上线，单机位自拍 9 分钟</h3>
+          <p>口语化叙述为主，评论区 5 条留言中有 3 条提到「适合背景播放」，与同类自拍作品评价方向不同。</p>
+        </article>
+        <article class="news-item">
+          <span class="n-date">2026-10-29</span>
+          <h3>夜班便利店全片 17 分钟，台词密度约每分钟 9 句</h3>
+          <p>场景集中在一间 24 小时便利店，夜班店员与三位顾客构成全部情节，无外景。</p>
+        </article>
+        <article class="news-item">
+          <span class="n-date">2026-10-22</span>
+          <h3>房间里的三个下午上线，女导演视角标签评分最高</h3>
+          <p>11 分钟、三个固定下午、光线从午后偏黄到傍晚偏蓝，剪辑点少于站内同类作品。</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="section" id="related">
+      <div class="sec-head">
+        <h2>相关推荐</h2>
+        <span class="sec-note">按内容方向与条目名索引</span>
+      </div>
+      <div class="rec-tags">
+        <a href="/#featured">合租屋 第二季 长镜头分析</a>
+        <a href="/#featured">素人情侣深夜自拍 前三集对比</a>
+        <a href="/#featured">女导演视角 房间里的三个下午</a>
+        <a href="/#featured">夜班便利店 台词密度讨论</a>
+        <a href="/#featured">天台与城市灯光 夜景外拍</a>
+        <a href="/#featured">凌晨两点的独白 背景播放</a>
+        <a href="/#updates">2026 年 11 月更新进度</a>
+        <a href="/#rank">站内完播率榜单</a>
+      </div>
+    </section>
+
+    <!-- 11 榜单 -->
+    <section class="section" id="rank">
+      <div class="sec-head">
+        <h2>站内热度榜单</h2>
+        <span class="sec-note">综合评分与更新进度，截至 11-08</span>
+      </div>
+      <ol class="rank-list">
+        <li><span class="rank-no">1</span><span class="r-name">合租屋 第二季</span><span class="r-info">评分 9.4 · 11-07 更新</span></li>
+        <li><span class="rank-no">2</span><span class="r-name">素人情侣深夜自拍 第3集</span><span class="r-info">评分 9.1 · 11-08 更新</span></li>
+        <li><span class="rank-no">3</span><span class="r-name">房间里的三个下午</span><span class="r-info">评分 8.9 · 女导演视角</span></li>
+        <li><span class="rank-no">4</span><span class="r-name">夜班便利店</span><span class="r-info">评分 8.7 · 10-29 上线</span></li>
+        <li><span class="rank-no">5</span><span class="r-name">合租屋 第一季</span><span class="r-info">评分 8.5 · 回看上涨 34%</span></li>
+        <li><span class="rank-no">6</span><span class="r-name">天台与城市灯光</span><span class="r-info">评分 8.2 · 夜景外拍</span></li>
+      </ol>
+    </section>
+
+    <!-- 12 投稿互动 -->
+    <section class="section" id="submit">
+      <div class="sec-head">
+        <h2>投稿与互动</h2>
+        <span class="sec-note">条目推荐、链接提交与话题投票</span>
+      </div>
+      <div class="overview">
+        <p>有想看的条目或发现遗漏作品，可提交条目名与来源链接，编辑会在 3 个工作日内核对类型、时长与更新状态后归入对应分类。每周五整理一次投稿清单，2026 年 11 月第一周收到投稿 46 条，其中 19 条已上线。</p>
+        <p>互动区目前开放两项：一是「本周最想看哪类更新」投票，本周选项为合租屋幕后、素人情侣续集、女导演视角新作；二是条目短评，评论会显示在对应条目页，讨论收音、镜头、台词的短评会被优先展示。</p>
+        <div class="hero-actions" style="margin-top:6px">
+          <a class="btn btn-primary" href="/#submit">提交条目推荐</a>
+          <a class="btn btn-ghost" href="/#comments" style="background:#fff;color:#7c2d12;border-color:#fed7aa">参与话题投票</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右辅助栏 -->
+  <aside class="content-aside" aria-label="辅助信息">
+    <div class="side-box">
+      <h2>今日热榜</h2>
+      <ol class="hot-rank">
+        <li><span class="n">1</span><span class="t">合租屋 第二季 首集 22 分钟</span></li>
+        <li><span class="n">2</span><span class="t">素人情侣深夜自拍 第3集</span></li>
+        <li><span class="n">3</span><span class="t">房间里的三个下午 光线叙事</span></li>
+        <li><span class="n">4</span><span class="t">夜班便利店 台词密度</span></li>
+        <li><span class="n">5</span><span class="t">天台与城市灯光 补光灯</span></li>
+      </ol>
+    </div>
+    <div class="side-box">
+      <h2>分类标签</h2>
+      <div class="side-tags">
+        <a href="/#categories">剧情短片</a>
+        <a href="/#categories">素人情侣</a>
+        <a href="/#categories">自拍独白</a>
+        <a href="/#categories">女导演视角</a>
+        <a href="/#categories">合租屋系列</a>
+        <a href="/#categories">夜景外拍</a>
+        <a href="/#categories">厨房日常</a>
+        <a href="/#categories">对话驱动</a>
+      </div>
+    </div>
+    <div class="side-box submit-box">
+      <h2>投稿入口</h2>
+      <p>发现遗漏条目或想推荐作品？提交条目名与来源，编辑 3 个工作日内核对归类。</p>
+      <a class="btn btn-primary" href="/#submit">提交推荐</a>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="foot-inner">
+    <div>
+      <div class="foot-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#1e293b"/><path d="M20 44V20h10c8 0 14 5 14 12s-6 12-14 12H20zm8-8h4c4 0 6-2 6-4s-2-4-6-4h-4v8z" fill="#f97316"/></svg>
+        51高潮视频合集
+      </div>
+      <p>收录 2026 年 9 月至 11 月的剧情短片、素人情侣自拍、女导演视角等条目，按拍摄形态与更新进度归档，每日 8:00 前后整理前一日更新。</p>
+    </div>
+    <div>
+      <h3>内容分类</h3>
+      <ul>
+        <li><a href="/#categories">剧情短片</a></li>
+        <li><a href="/#categories">素人情侣自拍</a></li>
+        <li><a href="/#categories">女导演视角</a></li>
+        <li><a href="/#categories">夜景外拍</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>站内导航</h3>
+      <ul>
+        <li><a href="/#featured">精选条目</a></li>
+        <li><a href="/#updates">最新更新</a></li>
+        <li><a href="/#rank">热度榜单</a></li>
+        <li><a href="/#submit">投稿互动</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>说明</h3>
+      <ul>
+        <li>内容为示例条目，用于分类检索演示</li>
+        <li>条目类型：短片、系列、自拍、剧情</li>
+        <li>更新节奏：每日整理前一日条目</li>
+        <li>最后核对：2026-11-08</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    © 2026 51高潮视频合集 · 本站内容仅限成年观众浏览 · 示例数据仅供参考
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function () {
+  // 移动端菜单
+  var menuBtn = document.getElementById('menuBtn');
+  var mainNav = document.getElementById('mainNav');
+  if (menuBtn && mainNav) {
+    menuBtn.addEventListener('click', function () {
+      var open = mainNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    mainNav.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mainNav.classList.contains('open')) {
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.focus();
+      }
+    });
+    document.addEventListener('click', function (e) {
+      if (mainNav.classList.contains('open') && !mainNav.contains(e.target) && e.target !== menuBtn) {
+        mainNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  // 搜索筛选
+  var form = document.getElementById('searchForm');
+  var input = document.getElementById('searchInput');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#cardGrid .v-card'));
+  var emptyTip = document.getElementById('emptyTip');
+  function runFilter() {
+    var q = (input.value || '').trim().toLowerCase();
+    var shown = 0;
+    cards.forEach(function (card) {
+      var hay = (card.getAttribute('data-search') || '') + ' ' + card.textContent.toLowerCase();
+      var hit = !q || hay.indexOf(q) !== -1;
+      card.style.display = hit ? '' : 'none';
+      if (hit) shown++;
+    });
+    if (emptyTip) emptyTip.style.display = shown === 0 ? 'block' : 'none';
+  }
+  if (form && input) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      runFilter();
+      var featured = document.getElementById('featured');
+      if (featured) featured.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    input.addEventListener('input', runFilter);
+  }
+
+  // 回顶
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > window.innerHeight) {
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+  }, { passive: true });
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // 左侧导航高亮（基于滚动位置）
+  var links = Array.prototype.slice.call(document.querySelectorAll('.channel-nav a'));
+  var sections = links.map(function (a) {
+    var id = a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  });
+  function highlightNav() {
+    var pos = window.scrollY + 140;
+    var idx = -1;
+    sections.forEach(function (sec, i) {
+      if (sec && sec.offsetTop <= pos) idx = i;
+    });
+    links.forEach(function (a, i) {
+      a.classList.toggle('active', i === idx);
+    });
+  }
+  window.addEventListener('scroll', highlightNav, { passive: true });
+  highlightNav();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "51高潮视频合集",
+  "description": "按剧情、素人情侣、自拍、女导演视角等类别归档的成人短片索引，提供条目看点、类型标签与更新进度。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "「合租屋」第二季和第一季的人物设定有变化吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "有。第二季首集 22 分钟，三主角仍是合租关系，但第一季结尾的开放式处理在第二季开场 6 分钟长镜头里被重新解释，其中一位角色的职业从第一季的便利店店员改为自由职业。两季间隔约 52 天。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "素人情侣自拍为什么单集时长越来越长？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "从「素人情侣深夜自拍」系列看，前两集 9 分钟，第三集 14 分钟，拉长部分主要是对话和场景铺垫。完播率从 62% 升到 71%，说明观众对长一点的版本接受度更高。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「女导演视角」是官方分类还是编辑归纳的？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "编辑按镜头语言归纳的，不是导演自报。目前 17 部作品，平均单个镜头 11 秒，站内其他作品平均 4 秒。有 3 部作品的导演在评论区表示不认为自己属于这一视角。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "剧情短片低于 15 分钟是不是通常不完整？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "多数情况是。站内 2026 年 10 月更新的剧情短片平均 18.3 分钟，低于 15 分钟的条目通常在情节收束上偏仓促，尤其是双线叙事。例外是「房间里的三个下午」，11 分钟但靠光线推进，结构完整。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "系列作品两集间隔多久算正常？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "站内剧情短片平均更新间隔 12 天，素人自拍平均 4 天。超过 20 天，人物设定断裂的概率明显上升。「合租屋」第一季第 4 到第 5 集间隔 23 天，评论区就出现了角色态度前后不一致的反馈。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "「夜班便利店」和「天台与城市灯光」怎么选？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "「夜班便利店」17 分钟、对话驱动、台词密度约每分钟 9 句，需要专注看。「天台与城市灯光」12 分钟、自然光加一盏补光灯、运镜缓慢横移，适合放松时看。"
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+                                    </html>
